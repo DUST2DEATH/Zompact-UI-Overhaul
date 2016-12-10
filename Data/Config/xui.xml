@@ -1,16 +1,17 @@
 <xui>
-	<ruleset name="default" scale="1.255" stackpanel_scale="1.05">
+	<ruleset name="default" scale="1.000" stackpanel_scale="1.05">
 	
 		<window_group name="crafting" controller="XUiC_CraftingWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
+			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
 		</window_group>
 		
 		<window_group name="character" controller="XUiC_CharacterSheetWindowGroup">
 			<window name="CharacterFrameWindow"/>
+			<window name="HUDClothing" />  <!-- Equipped Clothing //D2D -->
 			<window name="buffInfoPanel"/>
-			<window name="PlayerStatsWindow" />
 			<window name="ActiveBuffsWindow" />
 		</window_group>		
 		
@@ -18,62 +19,64 @@
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowToolsCampfire" />
-			<window name="windowFuel" />
-			<window name="windowOutput" />
+			<window name="windowCampfire"/><!-- Campfire //D2D -->
 			<window name="windowNonPagingHeader" />
+			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
 		</window_group>
 		
 		<window_group name="workstation_forge" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowToolsForge" />
-			<window name="windowFuel" />
-			<window name="windowForgeInput" />
-			<window name="windowOutput" />
+			<window name="windowForge" /><!-- Forge //D2D -->
 			<window name="windowNonPagingHeader" />
+			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
 		</window_group>
 		
 		<window_group name="workstation_cementMixer" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowOutput" />
+			<window name="windowCement" /><!-- Cement //D2D -->
 			<window name="windowNonPagingHeader" />
+			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
 		</window_group>		
 		
 		<window_group name="workstation_workbench" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowOutput" />
+			<window name="windowWorkbench"/><!-- Workbench //D2D -->
 			<window name="windowNonPagingHeader" />
-			<window name="windowCombine" />
+			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
 		</window_group>				
 
 		<window_group name="workstation_chemistryStation" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowFuel" />
-			<window name="windowOutput" />
+			<window name="windowChemistry"/><!-- Chemistry //D2D -->
 			<window name="windowNonPagingHeader" />
+			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
 		</window_group>
 		
-		<window_group name="looting" left_panel_valign_top="false" controller="XUiC_LootWindowGroup">
+		<window_group name="looting" controller="XUiC_LootWindowGroup">
 			<window name="windowLooting"/>
-			<window name="windowNonPagingHeader" />
+			<window name="windowNonPagingHeader"/>
+			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
 		</window_group>
 		
 		<window_group name="creative" controller="XUiC_CreativeWindowGroup">
 			<window name="windowCreative" />
+			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
 		</window_group>
 		
-		<window_group name="backpack">	
-			<window name="itemInfoPanel"/>
+		<window_group name="backpack">
+			<window name="itemInfoPanel"/> 
 			<window name="emptyInfoPanel" />
 			<window name="windowBackpack"/>
+			<window name="windowCompassbackpack" /> <!-- Time/Compass in backpack //D2D -->
+			<window name="compassbg" /> <!-- Compass BG/border //D2D -->
 		</window_group>
 		
 		<window_group name="dragAndDrop">
@@ -82,6 +85,9 @@
 		
 		<window_group name="compass">
 			<window name="windowCompass" />
+			<window name="compassbg" /> <!-- Compass BG/border //D2D -->
+			<window name="HUDClothing" />  <!-- Equipped Clothing //D2D -->
+			<window name="HUDplayercoords1" />  <!-- Player Coords // 1. Center 2. RightTop 3. LeftTop -->
 		</window_group>
 		
 		<window_group name="toolTip">
@@ -105,18 +111,27 @@
 			<window name="windowToolbelt" anchor="CenterBottom" />
 			<window name="HUDLeftStatBars" anchor="LeftBottom" />
 			<window name="HUDRightStatBars" anchor="RightBottom" />
-			<window name="windowQuestTracker" anchor="RightTop" />
+			<window name="windowQuestTracker1" /><!-- Quest Tracker // 1: bottom right 2: top right 3. top left 4. bottom left -->
+			<window name="HUDActiveBuffs1" /> <!-- Active Buffs Bar // 1: normal buffs 2: buffs with timers // WARNING #2 will cause the client to crash exiting MP servers -->
+			<window name="HUDSHWF" anchor="CenterBottom"/>    <!-- Player Stamina/Health/Water/Food above Toolbelt // D2D -->
+			<!-- <window name="HUDBeltNumbers" anchor="CenterBottom"/> --><!--  Toolbelt slot numbers //D2D Disabled as default. Themeing stops them sitting on top properly. If you use a transparent color scheme you can turn them back on, otherwise you cant see them. -->
+			<window name="HUDPlayerStats1" /><!-- Player Stats // 1. PVE 2. PVP -->
+			<window name="HUDWorldStats" /><!-- World Stats //D2D -->
+			<window name="PlayerLevelBar" /> <!-- Player Lvl Bar //D2D -->
+			<window name="compassbg" /> <!-- Compass BG/border //D2D -->
+			<window name="HUDVehicle" /><!-- Vehicle Stats //D2D -->
 		</window_group>
 		
 		<window_group name="vehicle" controller="XUiC_VehicleWindowGroup">
-			<window name="windowVehicle"/>
 			<window name="windowNonPagingHeader" />
+			<window name="windowVehiclePreview" />
 			<window name="windowVehicleStats" />
 			<window name="windowVehicleStorage" />
+			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
 		</window_group>
 		
 		<window_group name="windowpaging">
-			<window name="windowPagingHeader" anchor="CenterTop"/>
+			<window name="windowPagingHeader"/>
 		</window_group>
 
 		<window_group name="map">
@@ -151,8 +166,8 @@
 		<window_group name="quests" controller="XUiC_QuestWindowGroup">
 			<window name="windowQuestList" />
 			<window name="windowQuestDescription" />
-			<window name="windowQuestObjectives" />
-			<window name="windowQuestRewards" />
+			<!-- <window name="windowQuestObjectives" />
+			<window name="windowQuestRewards" />  -->
 		</window_group>
 		
 		<window_group name="journal" controller="XUiC_JournalWindowGroup">
@@ -174,6 +189,7 @@
 			<window name="windowTrader"/>
 			<window name="windowNonPagingHeader" />
 			<window name="serviceInfoPanel"/>
+			<window name="HUDClothing" />  <!-- Equipped Clothing //D2D -->
 		</window_group>
 		
 		<window_group name="sign">
