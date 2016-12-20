@@ -1,4 +1,4 @@
-<windows>
+<windows> 
 	<!-- HUD Player Position Coords -->
 	<window name="HUDplayercoords1" width="468" height="30" anchor="CenterTop" >
 		<sprite depth="1" name="backgroundMain" pos="-150,-5" width="300" height="30" color="[zompact_trackerbg]" type="sliced"/>
