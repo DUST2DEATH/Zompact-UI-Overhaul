@@ -281,7 +281,7 @@
 	
 	<!-- Crafting Item Info Panel Start -->
 	<window name="craftingInfoPanel" width="350" height="0" controller="CraftingInfoWindow" style="crafting.info.window" panel="Center" > <!-- Height 300 -->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="80,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="90,-50" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="qualityhr" pos="90,-205" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -349,7 +349,7 @@
 	
 	<!-- Crafting Recipes List Start --> 
 	<window name="windowCraftingList" width="400" height="450" controller="CraftingListInfo" panel="Left">
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<sprite depth="1" name="backgroundMain" pos="0,0" width="400" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />	
 	<sprite depth="1" name="backgroundMainmenu" pos="-50,0" width="45" height="397" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMainsearch" pos="0,-55" width="255" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -402,7 +402,7 @@
 	<!-- Crafting Recipes List End --> 
 	<!-- Crafting Queue Start -->
 	<window name="windowCraftingQueue" width="0" panel="Center" depth="10">
-		<rect depth="0" pos="-210,-410" width="50" controller="CraftingQueue">
+		<rect depth="0" pos="-210,-310" width="50" controller="CraftingQueue">
 			<grid name="queue" rows="1" cols="4" pos="0,-2" cell_width="50" cell_height="50" repeat_content="true">
 				<recipe_stack name="0"/>
 			</grid>
@@ -412,7 +412,7 @@
 	
 	<!-- Storage/Loot Window -->
 	<window name="windowLooting" pos="0,0" width="0" height="0" controller="LootWindow" panel="Left" anchor_side="left" visible="false">
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<panel name="header" >
 		<!-- <sprite depth="1" name="headerbackground" atlas="itemIconAtlas" sprite="zompactlootheader"/> --><!-- Uncomment this line to enable a custom sprite. -->
 		<sprite depth="1" name="headerbackground" color="[zompact_lootbg]" width="600" height="50" pos="0,0" type="sliced" globalopacitymod="2" /><!-- Disable this line if you enable the above -->
@@ -433,7 +433,7 @@
 	
 	<!-- Creative Window Start -->
 	<window name="windowCreative" width="420" height="400" panel="Left" controller="CreativeWindow" normal_color="[iconColor]">
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="420" height="62" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainmenu" pos="370,-65" width="50" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture name="zompactItemBackground" depth="2" size="420,62" texture="[zompact_creative]" material="Materials/Transparent Colored" pos="0,0" />
@@ -479,7 +479,7 @@
 	
 	<!-- Inspect Window Start -->
 	<window name="emptyInfoPanel" width="300" height="0" panel="Center" controller="InfoWindow"> <!-- Height 300 -->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<sprite depth="2" name="headerhr" pos="10,-50" width="680" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="qualityhr" pos="10,-205" width="680" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMain" pos="0,0" width="700" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -500,7 +500,7 @@
 	
 	<!-- Item Info Panel Start-->
 	<window name="itemInfoPanel" width="350" height="0" controller="ItemInfoWindow" panel="Center">
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<sprite depth="1" name="backgroundMainitem" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="headerhr" pos="10,-50" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="qualityhr" pos="10,-205" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -583,7 +583,7 @@
 	
 	<!-- Inventory -->
 	<window name="windowBackpack" width="[zompact_backpackwindowwidth]" height="[zompact_backpackwindowheight]" panel="Center" controller="BackpackWindow" >
-	<rect name="backpackposition" pos="0,-310">
+	<rect name="backpackposition" pos="0,-210">
 	<sprite depth="1" name="backgroundMainheader" pos="0,0" width="1008" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<texture depth="2" name="zompactItemBackground" size="1008,50" texture="[zompact_backpack]" material="Materials/Transparent Colored" pos="0,0" />
 		<button depth="3" name="btnSort" style="icon32px, press, hover" pos="15,-8" sprite="ui_game_symbol_backpack" tooltip_key="lblSortInventory" sound="[paging_click]" />
@@ -601,7 +601,7 @@
 	
 	<!-- Workbench Window Start -->
 	<window name="windowWorkbench" width="400" height="0" panel="Center">
-	<rect name="workbenchposition" pos="710,0">
+	<rect name="workbenchposition" pos="710,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
@@ -632,7 +632,7 @@
 	
 	<!-- Cement Window Start -->
 	<window name="windowCement" width="400" height="0" panel="Center">
-	<rect name="cementposition" pos="710,0">
+	<rect name="cementposition" pos="710,100">
 	<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
@@ -652,7 +652,7 @@
 	
 	<!-- Chemistry Window Start -->
 	<window name="windowChemistry" width="400" height="0" panel="Center">
-	<rect name="chemistryposition" pos="710,0">
+	<rect name="chemistryposition" pos="710,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="burnTimeBG" pos="175,-255" width="120" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -707,7 +707,7 @@
 	
 	<!-- Forge Window Start -->
 	<window name="windowForge" width="400" height="0" panel="Center">
-	<rect name="forgeposition" pos="710,0">
+	<rect name="forgeposition" pos="710,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainbank" pos="205,0" width="90" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -788,7 +788,7 @@
 	
 	<!-- Campfire Window Start -->
 	<window name="windowCampfire" width="400" height="0" panel="Center">
-	<rect name="campfireposition" pos="710,0">
+	<rect name="campfireposition" pos="710,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="burnTimeBG" pos="175,-255" width="120" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -960,7 +960,7 @@
 	
 	<!-- Character Window -->
 	<window name="CharacterFrameWindow" width="320" height="450" panel="Left" controller="CharacterFrameWindow" defaultcolor="[white]" hoveredcolor="[selectedColor]" >
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="320" height="490" color="[zompact_flatthemecolor]" type="sliced"  globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-37" width="300" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture depth="3" name="zompactCharBackground" size="320,500" texture="[zompact_charbg]" material="Materials/Transparent Colored" pos="0,0" />
@@ -1016,7 +1016,7 @@
 	
 	<!-- Active Buffs Window -->
 	<window name="ActiveBuffsWindow" Controller="ActiveBuffWindow" width="290" height="0" panel="Center" >
-	<rect name="activeposition" pos="710,0">
+	<rect name="activeposition" pos="710,100">
 		<sprite depth="1" name="backgroundMainitem" pos="0,0" width="290" height="300" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-30" width="270" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture depth="3" name="zompactActivebuffsBackground" size="290,300" texture="[zompact_activebuffbg]" material="Materials/Transparent Colored" pos="0,0" />
@@ -1039,7 +1039,7 @@
 	
 	<!-- Buff Info Panel -->
 	<window name="buffInfoPanel" width="350" height="0" controller="BuffInfoWindow" panel="Center">
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<sprite depth="1" name="backgroundMainitem" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="headerhr" pos="10,-50" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="qualityhr" pos="10,-205" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -1328,7 +1328,7 @@
 	
 	<!-- Minibike Interaction Start -->
 	<window name="windowVehicleStats" width="0" height="0" panel="Center" controller="VehicleStats" >
-	<rect name="vehiclecontainer" width="300" height="250" pos="715,0" controller="VehicleFrameWindow" >
+	<rect name="vehiclecontainer" width="300" height="250" pos="715,100" controller="VehicleFrameWindow" >
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="300" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-30" width="280" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainrefuel" pos="-335,-255" width="75" height="50" color="[zompact_button]" type="sliced" fillcenter="true" globalopacitymod="2" />	
@@ -1418,7 +1418,7 @@
 	
 	<!-- Minibike Storage Start -->
 	<window name="windowVehicleStorage" width="[zompact_minibikebasketwidth]" height="[zompact_minibikebasketheight]" depth="5" panel="Left" backgroundcolor="[black]">
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="[zompact_minibikebasketwidth]" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture depth="2" name="zompactItemBackground" size="[zompact_minibikebasketthemebgvalue]" texture="[zompact_minibikebasket]" material="Materials/Transparent Colored" pos="0,0" />
 		<sprite depth="2" name="windowIcon" size="30,30" pos="5,-7" sprite="ui_game_symbol_loot_sack" color="[zompact_windownameicons]"/>
@@ -1440,7 +1440,7 @@
 	
 	<!-- Assembly Window Start -->
 	<window name="windowAssemble" width="0" height="0" panel="Center" controller="AssembleWindow" >
-	<rect name="assemblecontainer" width="300" height="250" pos="710,0">
+	<rect name="assemblecontainer" width="300" height="250" pos="710,100">
 		<sprite depth="1" name="backgroundMainclosebtn" pos="-335,-255" width="75" height="50" color="[zompact_button]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainitem" pos="0,0" width="300" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-30" width="280" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -1909,7 +1909,7 @@
 	
 	<!-- Trader Window Start -->
 	<window name="windowTrader"  width="400" height="0" panel="Center" controller="TraderWindow">
-	<rect name="position" width="350" height="488" pos="-410,0">
+	<rect name="position" width="350" height="488" pos="-410,100">
 	<sprite depth="1" name="backgroundMainheader" pos="0,0" width="400" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMainmenu" pos="-50,0" width="45" height="545" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMainsearch" pos="0,-55" width="255" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -1981,7 +1981,7 @@
 	<!-- Trader Window End -->
 	<!-- Vending Machine Service Panel Start -->
 	<window name="serviceInfoPanel" width="350" height="0" controller="ServiceInfoWindow" panel="Center">
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="80,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="90,-50" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainstats" pos="285,0" width="330" height="120" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />

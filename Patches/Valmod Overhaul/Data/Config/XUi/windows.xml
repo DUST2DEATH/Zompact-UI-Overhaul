@@ -606,19 +606,16 @@
 		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
 		<!-- Labels and Icons -->
+		<sprite size="20,20" pos="65,-1" sprite="ui_game_symbol_wrench" depth="5" color="[zompact_itemwindowicons]"/>
+		<label height="23" font_size="22" depth="6" pos="90,-1" text="TOOLS" text_key="xuiTools" color="[zompact_itemheadertext]"/>
 		<sprite size="20,20" pos="15,-205" sprite="ui_game_symbol_loot_sack" depth="5" color="[zompact_itemwindowicons]"/>
 		<label height="23" font_size="22" depth="2" pos="5,-225" text="OUTPUT" text_key="xuiOutput" color="[zompact_itemheadertext]"/>
-		<sprite size="20,20" pos="1,-1" sprite="ui_game_symbol_add" color="[zompact_itemwindowicons]"/>
-		<label height="23" font_size="22" depth="2" pos="25,-1" text="COMBINE" text_key="xuiCombine" color="[zompact_itemheadertext]"/>
-		<!-- Combine Grid -->
-		<rect pos="0, -23" height="230" width="228" controller="CombineGrid">	
-			<grid name="parts" rows="1" cols="3" pos="5,-38" cell_width="60" cell_height="60" repeat_content="true" >
-				<required_item_stack />
-			</grid>
-			<label depth="3" pos="5,-15" text="Item A" text_key="xuiCombineItemA" font_size="22"/>
-			<label depth="3" pos="65,-15" text="Item B" text_key="xuiCombineItemB" font_size="22"/>
-			<label depth="3" pos="125,-15" text="Result" text_key="xuiResult" font_size="22"/>
-		</rect>
+		<!-- Required Tools -->
+		<rect name="contentTools" depth="6" pos="5,-22" height="60" disablefallthrough="true" on_press="true">
+			<grid name="inventory" rows="1" cols="3" pos="0,0" cell_width="60" cell_height="60" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="handSaw,weldingTorch,paperRack" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>		
+		</rect>	
 	<!-- Output -->
 	<rect name="contentOutput" depth="0" pos="-130,-255" height="50" disablefallthrough="true" on_press="true">
 		<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="50" color="0,0,0,1" type="sliced" fillcenter="false" on_press="true" />	
@@ -629,6 +626,27 @@
 	</rect>
 	</window>
 	<!-- Workbench Window End -->
+	<!-- Combine Window Start -->
+	<window name="windowCombine" width="400" height="0" panel="Center">
+	<rect name="workbenchposition" pos="710,0">
+		<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+		<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
+		<!-- Labels and Icons -->
+		<sprite size="20,20" pos="1,-1" sprite="ui_game_symbol_add" color="[zompact_itemwindowicons]"/>
+		<label height="23" font_size="22" depth="2" pos="65,-85" text="COMBINE" text_key="xuiCombine" color="[zompact_itemheadertext]"/>
+		<!-- Combine Grid -->
+		<rect pos="0, -85" height="230" width="228" controller="CombineGrid">	
+			<grid name="parts" rows="1" cols="3" pos="5,-38" cell_width="60" cell_height="60" repeat_content="true" >
+				<required_item_stack />
+			</grid>
+			<label depth="3" pos="5,-15" text="Item A" text_key="xuiCombineItemA" font_size="22"/>
+			<label depth="3" pos="65,-15" text="Item B" text_key="xuiCombineItemB" font_size="22"/>
+			<label depth="3" pos="125,-15" text="Result" text_key="xuiResult" font_size="22"/>
+		</rect>
+	</rect>
+	</window>
+	<!-- Combine Window End -->
 	
 	<!-- Cement Window Start -->
 	<window name="windowCement" width="400" height="0" panel="Center">
@@ -637,8 +655,16 @@
 	<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
 			<!-- Labels and Icons -->
+			<sprite size="20,20" pos="65,-1" sprite="ui_game_symbol_wrench" depth="5" color="[zompact_itemwindowicons]"/>
+			<label height="23" font_size="22" depth="6" pos="90,-1" text="TOOLS" text_key="xuiTools" color="[zompact_itemheadertext]"/>
 			<sprite size="20,20" pos="15,-205" sprite="ui_game_symbol_loot_sack" depth="5" color="[zompact_itemwindowicons]"/>
 			<label height="23" font_size="22" depth="2" pos="5,-225" text="OUTPUT" text_key="xuiOutput" color="[zompact_itemheadertext]"/>
+	<!-- Required Tools -->
+	<rect name="contentTools" depth="6" pos="5,-22" height="60" disablefallthrough="true" on_press="true">
+		<grid name="inventory" rows="1" cols="1" pos="0,0" cell_width="60" cell_height="60" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="chisel" required_tools_only="true">
+			<required_item_stack name="0"/>
+		</grid>		
+	</rect>
 	<!-- Output -->
 	<rect name="contentOutput" depth="0" pos="-130,-255" height="50" disablefallthrough="true" on_press="true">
 		<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="50" color="0,0,0,1" type="sliced" fillcenter="false" on_press="true" />	
@@ -659,11 +685,19 @@
 		<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
 		<texture depth="2" name="zompactburnBackground" size="120,50" texture="[zompact_burnbg]" material="Materials/Transparent Colored" pos="175,-255" />
 		<!-- Labels and Icons -->
+		<sprite size="20,20" pos="65,-1" sprite="ui_game_symbol_wrench" depth="5" color="[zompact_itemwindowicons]"/>
+		<label height="23" font_size="22" depth="6" pos="90,-1" text="TOOLS" text_key="xuiTools" color="[zompact_itemheadertext]"/>
 		<sprite size="20,20" pos="65,-85" sprite="ui_game_symbol_fire" depth="5" color="[zompact_itemwindowicons]"/>
 		<label height="23" font_size="22" depth="5" pos="90,-85" text="FUEL" text_key="xuiFuel" color="[zompact_itemheadertext]"/>
 		<label name="burnTimeLeft" depth="5" pos="190,-265" size="100,45" text="00:00" font_size="36" color="[zompact_burntimetext]"/>
 		<sprite size="20,20" pos="15,-205" sprite="ui_game_symbol_loot_sack" depth="5" color="[zompact_itemwindowicons]"/>
 		<label height="23" font_size="22" depth="5" pos="5,-225" text="OUTPUT" text_key="xuiOutput" color="[zompact_itemheadertext]"/>
+	<!-- Required Tools -->
+	<rect name="contentTools" depth="6" pos="5,-22" height="60" disablefallthrough="true" on_press="true">
+		<grid name="inventory" rows="1" cols="2" pos="0,0" cell_width="60" cell_height="60" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="beaker,waterFilter" required_tools_only="true">
+			<required_item_stack name="0"/>
+		</grid>		
+	</rect>
 	<!-- Fuel -->
 	<rect name="windowFuel" width="228" height="166" pos="0,0">	
 		<!-- Fuel Grid -->
@@ -804,7 +838,7 @@
 		<label height="23" font_size="22" depth="3" pos="5,-225" text="OUTPUT" text_key="xuiOutput" color="[zompact_itemheadertext]"/>
 		<!-- Required Tools -->
 		<rect name="contentTools" depth="6" pos="5,-22" height="60" disablefallthrough="true" on_press="true">
-			<grid name="inventory" rows="1" cols="3" pos="0,0" cell_width="60" cell_height="60" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="cookingPot,cookingGrill,beaker" required_tools_only="true">
+			<grid name="inventory" rows="1" cols="3" pos="0,0" cell_width="60" cell_height="60" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="cookingPot,cookingGrill,bowlWater" required_tools_only="true">
 				<required_item_stack name="0"/>
 			</grid>	
 		</rect>
@@ -1578,7 +1612,7 @@
 	<texture depth="2" name="zompactItemiconBackground" size="154,154" texture="[zompact_skillsinfoicon]" material="Materials/Transparent Colored" pos="0,-55" />
 	<texture depth="2" name="zompactItemdescBackground" size="440,210" texture="[zompact_skillsinfodesc]" material="Materials/Transparent Colored" pos="160,-55" />
 	<texture depth="2" name="zompactItemprogressBackground" size="603,30" texture="[zompact_skillsinfoprogress]" material="Materials/Transparent Colored" pos="0,-270" />
-	<texture depth="2" name="zompactItemrequirementsBackground" size="603,200" texture="[zompact_skillsinforequirements]" material="Materials/Transparent Colored" pos="0,-305" />
+	<texture depth="2" name="zompactItemrequirementsBackground" size="603,470" texture="[zompact_skillsinforequirements]" material="Materials/Transparent Colored" pos="0,-305" />
 		<rect name="header" height="50" depth="6" >
 			<sprite pos="5,-5" depth="2" name="windowIcon" size="30,30" sprite="ui_game_symbol_skills" color="[zompact_windownameicons]"/>
 			<label name="windowName" depth="6" pos="5,-5" width="603" height="30" text="{groupname}" font_size="26" justify="center" color="[zompact_windownametext]" />
@@ -1598,7 +1632,7 @@
 			<sprite depth="3" pos="30,-225" height="10" width="398" color="[zompact_skillentryprogressbg]" foregroundlayer="true" visible="{skillpercentshouldshow}" type="sliced" />
 			<sprite depth="3" pos="30,-225" height="10" width="398" color="[zompact_skillentryprogress]" foregroundlayer="true" type="filled" fill="{skillpercentthislevel}" visible="{skillpercentshouldshow}" />
 		</rect>
-		<rect depth="6" pos="0,-305" width="600" height="197">
+		<rect depth="6" pos="0,-305" width="600" height="463">
 			<rect name="tableHeader" pos="0,0" width="600" height="43"> 
 				<rect depth="1" width="303" height="40">
 					<label name="lblAttributes" depth="1" pos="50,-10" upper_case="true" text="ATTRIBUTES" text_key="xuiAttributes"  width="300" height="34" color="[zompact_itemheadertext]"/>
@@ -1609,14 +1643,25 @@
 					<label depth="1" pos="50,-10" upper_case="true" text="NEXT LVL REQUIREMENTS" text_key="xuiNextLevelRequirements" height="34" width="300" color="[zompact_itemheadertext]"/>
 				</rect>
 			</rect>
-			<grid rows="5" cols="1" pos="10,-46" width="295" cell_width="147" cell_height="28" controller="SkillAttributeList">
+			<grid rows="15" cols="1" pos="10,-46" width="295" cell_width="147" cell_height="28" controller="SkillAttributeList">
+				<skill_attribute />
+				<skill_attribute />
+				<skill_attribute />
+				<skill_attribute />
+				<skill_attribute />
+				<skill_attribute />
+				<skill_attribute />
+				<skill_attribute />
+				<skill_attribute />
+				<skill_attribute />
 				<skill_attribute />
 				<skill_attribute />
 				<skill_attribute />
 				<skill_attribute />
 				<skill_attribute />
 			</grid>
-			<grid rows="4" cols="1" pos="300,-46" width="300" cell_width="147" cell_height="42" controller="SkillRequirementList">
+			<grid rows="5" cols="1" pos="300,-46" width="300" cell_width="147" cell_height="42" controller="SkillRequirementList">
+				<skill_requirement />
 				<skill_requirement />
 				<skill_requirement />
 				<skill_requirement />
@@ -2232,4 +2277,124 @@
 			</rect>
 		</panel>
 	</window>
+	<!-- VALMOD WINDOWS -->
+	<!-- Oven Window Start -->
+	<window name="windowValoven" width="400" height="0" panel="Center">
+	<rect name="ovenposition" pos="710,0">
+	<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
+			<!-- Labels and Icons -->
+			<sprite size="20,20" pos="65,-1" sprite="ui_game_symbol_wrench" depth="5" color="[zompact_itemwindowicons]"/>
+			<label height="23" font_size="22" depth="6" pos="90,-1" text="TOOLS" text_key="xuiTools" color="[zompact_itemheadertext]"/>
+			<sprite size="20,20" pos="15,-205" sprite="ui_game_symbol_loot_sack" depth="5" color="[zompact_itemwindowicons]"/>
+			<label height="23" font_size="22" depth="2" pos="5,-225" text="OUTPUT" text_key="xuiOutput" color="[zompact_itemheadertext]"/>
+	<!-- Required Tools -->
+		<rect name="contentTools" depth="6" pos="5,-22" height="60" disablefallthrough="true" on_press="true">
+			<grid name="inventory" rows="1" cols="3" pos="0,0" cell_width="60" cell_height="60" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="cookingPot,cookingGrill,bowlWater" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>	
+		</rect>
+	<!-- Output -->
+	<rect name="contentOutput" depth="0" pos="-130,-255" height="50" disablefallthrough="true" on_press="true">
+		<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="50" color="0,0,0,1" type="sliced" fillcenter="false" on_press="true" />	
+			<grid name="inventory" rows="1" cols="6" pos="0,0" cell_width="50" cell_height="50" controller="WorkstationOutputGrid" repeat_content="true">
+				<output_stack name="0"/>
+			</grid>
+	</rect>
+	</rect>
+	</window>
+	<!-- Oven Window End -->
+	<!-- dyestation Window Start -->
+	<window name="windowValdye" width="400" height="0" panel="Center">
+	<rect name="dyeposition" pos="710,0">
+	<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
+			<!-- Labels and Icons -->
+			<sprite size="20,20" pos="15,-205" sprite="ui_game_symbol_loot_sack" depth="5" color="[zompact_itemwindowicons]"/>
+			<label height="23" font_size="22" depth="2" pos="5,-225" text="OUTPUT" text_key="xuiOutput" color="[zompact_itemheadertext]"/>
+	<!-- Output -->
+	<rect name="contentOutput" depth="0" pos="-130,-255" height="50" disablefallthrough="true" on_press="true">
+		<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="50" color="0,0,0,1" type="sliced" fillcenter="false" on_press="true" />	
+			<grid name="inventory" rows="1" cols="6" pos="0,0" cell_width="50" cell_height="50" controller="WorkstationOutputGrid" repeat_content="true">
+				<output_stack name="0"/>
+			</grid>
+	</rect>
+	</rect>
+	</window>
+	<!-- dyestation Window End -->
+	<!-- armory Window Start -->
+	<window name="windowValarmory" width="400" height="0" panel="Center">
+	<rect name="armposition" pos="710,0">
+	<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
+			<!-- Labels and Icons -->
+			<sprite size="20,20" pos="65,-1" sprite="ui_game_symbol_wrench" depth="5" color="[zompact_itemwindowicons]"/>
+			<label height="23" font_size="22" depth="6" pos="90,-1" text="TOOLS" text_key="xuiTools" color="[zompact_itemheadertext]"/>
+			<sprite size="20,20" pos="15,-205" sprite="ui_game_symbol_loot_sack" depth="5" color="[zompact_itemwindowicons]"/>
+			<label height="23" font_size="22" depth="2" pos="5,-225" text="OUTPUT" text_key="xuiOutput" color="[zompact_itemheadertext]"/>
+	<!-- Required Tools -->
+		<rect name="contentTools" depth="6" pos="5,-22" height="60" disablefallthrough="true" on_press="true">
+			<grid name="inventory" rows="1" cols="4" pos="0,0" cell_width="60" cell_height="60" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="sewingKit,tanningRack,weldingTorch,bulletTumbler" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>	
+		</rect>
+	<!-- Output -->
+	<rect name="contentOutput" depth="0" pos="-130,-255" height="50" disablefallthrough="true" on_press="true">
+		<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="50" color="0,0,0,1" type="sliced" fillcenter="false" on_press="true" />	
+			<grid name="inventory" rows="1" cols="6" pos="0,0" cell_width="50" cell_height="50" controller="WorkstationOutputGrid" repeat_content="true">
+				<output_stack name="0"/>
+			</grid>
+	</rect>
+	</rect>
+	</window>
+	<!-- armory Window End -->
+	<!-- merchant Window Start -->
+	<window name="windowValmerchant" width="400" height="0" panel="Center">
+	<rect name="merchposition" pos="710,0">
+	<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
+			<!-- Labels and Icons -->
+			<sprite size="20,20" pos="15,-205" sprite="ui_game_symbol_loot_sack" depth="5" color="[zompact_itemwindowicons]"/>
+			<label height="23" font_size="22" depth="2" pos="5,-225" text="OUTPUT" text_key="xuiOutput" color="[zompact_itemheadertext]"/>
+	<!-- Output -->
+	<rect name="contentOutput" depth="0" pos="-130,-255" height="50" disablefallthrough="true" on_press="true">
+		<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="50" color="0,0,0,1" type="sliced" fillcenter="false" on_press="true" />	
+			<grid name="inventory" rows="1" cols="6" pos="0,0" cell_width="50" cell_height="50" controller="WorkstationOutputGrid" repeat_content="true">
+				<output_stack name="0"/>
+			</grid>
+	</rect>
+	</rect>
+	</window>
+	<!-- merchant Window End -->
+	<!-- decor Window Start -->
+	<window name="windowValdecor" width="400" height="0" panel="Center">
+	<rect name="decorposition" pos="710,0">
+	<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
+	<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
+			<!-- Labels and Icons -->
+			<sprite size="20,20" pos="65,-1" sprite="ui_game_symbol_wrench" depth="5" color="[zompact_itemwindowicons]"/>
+			<label height="23" font_size="22" depth="6" pos="90,-1" text="TOOLS" text_key="xuiTools" color="[zompact_itemheadertext]"/>
+			<sprite size="20,20" pos="15,-205" sprite="ui_game_symbol_loot_sack" depth="5" color="[zompact_itemwindowicons]"/>
+			<label height="23" font_size="22" depth="2" pos="5,-225" text="OUTPUT" text_key="xuiOutput" color="[zompact_itemheadertext]"/>
+	<!-- Required Tools -->
+		<rect name="contentTools" depth="6" pos="5,-22" height="60" disablefallthrough="true" on_press="true">
+			<grid name="inventory" rows="1" cols="4" pos="0,0" cell_width="60" cell_height="60" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="handSaw,weldingTorch,electricToolkit" required_tools_only="true">
+				<required_item_stack name="0"/>
+			</grid>	
+		</rect>
+	<!-- Output -->
+	<rect name="contentOutput" depth="0" pos="-130,-255" height="50" disablefallthrough="true" on_press="true">
+		<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="50" color="0,0,0,1" type="sliced" fillcenter="false" on_press="true" />	
+			<grid name="inventory" rows="1" cols="6" pos="0,0" cell_width="50" cell_height="50" controller="WorkstationOutputGrid" repeat_content="true">
+				<output_stack name="0"/>
+			</grid>
+	</rect>
+	</rect>
+	</window>
+	<!-- decor Window End -->
 </windows>

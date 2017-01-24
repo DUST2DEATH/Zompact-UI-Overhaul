@@ -183,7 +183,7 @@
 			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="75" height="75" color="[zompact_toolbeltcellcbr]" type="sliced" fillcenter="false" />	
 			<sprite depth="3" name="background" sprite="menu_empty3px" pos="1,-1" width="73" height="73" color="[darkGrey]" type="sliced" globalopacity="true" fillcenter="false"/>
 			<texture depth="2" name="zompactItemBackground" size="75,75" texture="[zompact_toolbeltcell]" material="Materials/Transparent Colored" pos="0,0" />
-			<sprite depth="2" name="highlightOverlay" width="1" height="1" color="[darkGrey]" pos="9999,9999" type="sliced" globalopacity="true"/>
+			<sprite depth="2" name="highlightOverlay" width="75" height="75" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true"/>
 
 			<sprite depth="4" name="itemIcon" width="70" height="70" atlas="ItemIconAtlas" sprite="{itemicon}" pos="37,-37" pivot="center" foregroundlayer="true" color="{iconcolor}" />
 			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="" pos="2,-2" foregroundlayer="true"/>
