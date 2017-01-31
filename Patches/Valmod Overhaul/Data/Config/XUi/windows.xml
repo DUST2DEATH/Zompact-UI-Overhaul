@@ -76,7 +76,8 @@
 	<window name="HUDLeftStatBars">
 		<rect name="hud" pos="70,25" side="left" controller="CollectedItemList" pivot="BottomLeft">
 			<panel width="168" height="43" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" >
-				<sprite depth="1" pos="0,0" name="Background" color="[zompact_collecteditem]" height="43" width="162" pivot="center" />
+				<sprite depth="1" pos="9999,9999"  name="Background" sprite="ui_game_popup" height="43" width="162" pivot="center" />
+				<sprite depth="1" pos="0,0" name="mainBackground" color="[zompact_collecteditem]" height="43" width="162" pivot="center" />
 				<texture name="zompactItemBackground" depth="2" size="162,43" texture="[zompact_collecteditembg]" material="Materials/Transparent Colored" pos="0,0" pivot="center" />
 				<sprite depth="4" name="Icon" atlas="ItemIconAtlas"  size="36,32" pos="50,0" pivot="center" foregroundlayer="true"/>
 				<label depth="6" name="TextContent" font_size="28" color="[zompact_collecteditemtext]" justify="center" height="30" pivot="center"/>
