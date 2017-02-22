@@ -124,7 +124,6 @@
 		
 		<window_group name="vehicle" controller="XUiC_VehicleWindowGroup">
 			<window name="windowNonPagingHeader" />
-			<window name="windowVehiclePreview" />
 			<window name="windowVehicleStats" />
 			<window name="windowVehicleStorage" />
 			<window name="HUDClothing" /><!-- Equipped Clothing //D2D -->
