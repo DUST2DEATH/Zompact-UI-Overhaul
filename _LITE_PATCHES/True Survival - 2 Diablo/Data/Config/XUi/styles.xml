@@ -583,7 +583,7 @@
 	<style name="workstation.reserve.name" type="label">
 		<style_entry name="depth" value="2"/>
 		<style_entry name="height" value="24"/>
-		<style_entry name="width" value="53"/>
+		<style_entry name="width" value="70"/>
 	</style>
 	
 	<style name="workstation.reserve.weight" type="label">

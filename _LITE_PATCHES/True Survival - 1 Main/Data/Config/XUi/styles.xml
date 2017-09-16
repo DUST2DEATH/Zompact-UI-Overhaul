@@ -55,27 +55,27 @@
 		**** A VALUE MUST BE SET - CAN NOT BE NULL***
 		-->
 		<!-- Main Hud -->
-		<style_entry name="zompact_compass" value="@file:Mods\Zompact\Themes\diablo\compass.jpg"/><!-- 595 x 31 Compass Background-->
-		<style_entry name="zompact_hudleft" value="@file:Mods\Zompact\Themes\diablo\hudleft.png"/><!-- 635 x 42 World Stats Background--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
-		<style_entry name="zompact_hudright" value="@file:Mods\Zompact\Themes\diablo\hudright.png"/><!-- 635 x 42 Player PVE/PVP Stats--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
+		<style_entry name="zompact_compass" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 595 x 31 Compass Background-->
+		<style_entry name="zompact_hudleft" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 635 x 42 World Stats Background--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
+		<style_entry name="zompact_hudright" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 635 x 42 Player PVE/PVP Stats--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
 		<style_entry name="zompact_hudbuffbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 640 x 95 OPTIONAL background to the hud buffs display. NO CUSTOMIZABLE CELLS for these.(All cells are drawn at all times even if not used by a buff) -->
 		<style_entry name="zompact_hudclothingbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 640 x 95 OPTIONAL background to the hud clothing display, seperate to the cells-->
-		<style_entry name="zompact_hudshwf" value="@file:Mods\Zompact\Themes\diablo\hudshwf.png"/><!-- 150 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
-		<style_entry name="zompact_hudvehicle" value="@file:Mods\Zompact\Themes\diablo\hudvehicle.png"/><!-- 200 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
+		<style_entry name="zompact_hudshwf" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 150 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
+		<style_entry name="zompact_hudvehicle" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 200 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
 		<style_entry name="zompact_toolbelt" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 610 x 75 --><!-- Optional, not necessary, little room left/right no room available top/bottom. pointless really, its there if you want to use it -->
-		<style_entry name="zompact_xpoverlay" value="@file:Mods\Zompact\Themes\diablo\xpbar.png"/><!-- 1783 x 6 --><!-- Must be an overlay, transparent section for the fill bar -->
-		<style_entry name="zompact_activeitembg" value="@file:Mods\Zompact\Themes\diablo\activeitem.png"/><!-- 162 x 70 Active Item Background / Ammo Counter Background-->
+		<style_entry name="zompact_xpoverlay" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 1783 x 6 --><!-- Must be an overlay, transparent section for the fill bar -->
+		<style_entry name="zompact_activeitembg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 162 x 70 Active Item Background / Ammo Counter Background-->
 		<style_entry name="zompact_collecteditembg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 162 x 43 Collected Item Background -->
-		<style_entry name="zompact_toolbeltcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/> <!-- 75 x 75 --><!-- Toolbelt Cell background. Hud numbering will be hidden if this field is filled. If you want to keep hud numbers but change background and border colours do so below zompact_toolbeltcellcbg / zompact_toolbeltcellcbr -->
-		<style_entry name="zompact_clothingcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 59 x 59 --><!--Hud clothing cell background -->
+		<style_entry name="zompact_toolbeltcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 75 x 75 --><!-- Toolbelt Cell background. Hud numbering will be hidden if this field is filled. If you want to keep hud numbers but change background and border colours do so below zompact_toolbeltcellcbg / zompact_toolbeltcellcbr -->
+		<style_entry name="zompact_clothingcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 59 x 59 --><!--Hud clothing cell background -->
 		<!-- Zompact Colours Start -->
 		<!-- Main HUD -->
 		<style_entry name="zompact_xpbg" value="120,120,120,255"/> <!-- HUD Player XP bar background color 120,120,120,255 default-->
-		<style_entry name="zompact_xp" value="[darkorange]"/> <!-- HUD Player XP bar colour 235,235,235,255 default-->
+		<style_entry name="zompact_xp" value="235,235,235,255"/> <!-- HUD Player XP bar colour 235,235,235,255 default-->
 		<style_entry name="zompact_trackerbg" value="52,52,52,150"/><!-- HUD Quest tracker Background color/opacity. A custom sprite can be enabled here if you want to create one. name it: zompacttracker.png (enable sprite in windows.xml (search zompacttracker))-->
 		<style_entry name="zompact_questtrackertext" value="[white]"/><!-- HUD Quest tracker text colour -->
-		<style_entry name="zompact_toolbeltcellcbg" value="52,52,52,0"/><!-- HUD Toolbelt cell coloured sprite background. Change this value to change the color of the toolbelt cell background. WARNING! zompact_toolbeltcell overrides this option -->
-		<style_entry name="zompact_toolbeltcellcbr" value="40,40,40,0"/><!-- HUD Toolbelt cell coloured sprite border. Change this value to change the color of the toolbelt cell border. WARNING! zompact_toolbeltcell overrides this option -->
+		<style_entry name="zompact_toolbeltcellcbg" value="52,52,52,255"/><!-- HUD Toolbelt cell coloured sprite background. Change this value to change the color of the toolbelt cell background. WARNING! zompact_toolbeltcell overrides this option -->
+		<style_entry name="zompact_toolbeltcellcbr" value="40,40,40,255"/><!-- HUD Toolbelt cell coloured sprite border. Change this value to change the color of the toolbelt cell border. WARNING! zompact_toolbeltcell overrides this option -->
 		<style_entry name="zompact_activeitem" value="52,52,52,150"/><!-- HUD Active Item Background color/opacity. A custom background can be applied here from the Main Hud Section at the top if you wish. -->
 		<style_entry name="zompact_activeitemtext" value="[white]"/><!-- HUD active item text colour (ammo counter) -->
 		<style_entry name="zompact_collecteditem" value="52,52,52,150"/><!-- HUD Collected Item background color/opacity. A custom background can be applied here from the Main Hud Section at the top if you wish.-->
@@ -583,7 +583,7 @@
 	<style name="workstation.reserve.name" type="label">
 		<style_entry name="depth" value="2"/>
 		<style_entry name="height" value="24"/>
-		<style_entry name="width" value="53"/>
+		<style_entry name="width" value="70"/>
 	</style>
 	
 	<style name="workstation.reserve.weight" type="label">
