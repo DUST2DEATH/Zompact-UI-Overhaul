@@ -17,12 +17,12 @@
 		<style_entry name="zompact_backpackwindowwidth" value="1008"/><!-- Backpack window width  Base Value: 1008   Add (X) for each column over 16-->
 		<style_entry name="zompact_backpackwindowheight" value="150"/><!-- Backpack window height Base Value: 150    Add (X) for each row over (Y)-->
 		
-		<style_entry name="zompact_minibikebasketcolumns" value="3"/><!-- Minibike Storage Grid Columns (technically rows, it seems to be read the opposite of what you expect. Ive named the variables to make sense here, but they fill the normal entry.) -->
-		<style_entry name="zompact_minibikebasketrows" value="6"/><!-- Minibike Storage Grid Rows (technically columns, see above.) -->
+		<style_entry name="zompact_minibikebasketcolumns" value="7"/><!-- Minibike Storage Grid Columns (technically rows, it seems to be read the opposite of what you expect. Ive named the variables to make sense here, but they fill the normal entry.) -->
+		<style_entry name="zompact_minibikebasketrows" value="5"/><!-- Minibike Storage Grid Rows (technically columns, see above.) -->
 		<!-- The 2 variables above need to be set in loot.xml. find "Minibike Storage" adjust "3,6" to match new size -->
 		
-		<style_entry name="zompact_minibikebasketwidth" value="225"/><!-- Minibike Storage Window Width  columns x75 -->
-		<style_entry name="zompact_minibikebasketheight" value="450"/><!-- Minibike Storage Window Height  rows x75 -->
+		<style_entry name="zompact_minibikebasketwidth" value="375"/><!-- Minibike Storage Window Width  columns x75 -->
+		<style_entry name="zompact_minibikebasketheight" value="525"/><!-- Minibike Storage Window Height  rows x75 -->
 		<style_entry name="zompact_minibikebasketthemebgvalue" value="225,50"/><!-- width,height. ONLY ADJUST WIDTH to match what you set above. This is a theme variable. If you do not adjust this, and theme the via zompact_minibikebasket, the image used will not match the width of the window -->
 		
 		<style_entry name="zompact_lootrows" value="10"/><!-- Loot item grid rows --><!-- Vanilla value: 10   is maximum size leave at 10-->
@@ -476,7 +476,7 @@
 		<style_entry name="select_color" value="[zompact_holding]"/>
 		<style_entry name="press_color" value="[limeGreen]"/>
 		<style_entry name="final_pressed_color" value="[lightGrey]"/>
-		<style_entry name="background_color" value="[mediumGrey]"/>
+		<style_entry name="background_color" value="[transparent]"/>
 		<style_entry name="highlight_color" value="[hoverColor]"/>
 		<style_entry name="holding_color" value="[white]"/>
 		<style_entry name="width" value="59"/>
@@ -506,7 +506,7 @@
 		<style_entry name="select_color" value="[zompact_holding]"/>
 		<style_entry name="press_color" value="[limeGreen]"/>
 		<style_entry name="final_pressed_color" value="[lightGrey]"/>
-		<style_entry name="background_color" value="[mediumGrey]"/>
+		<style_entry name="background_color" value="[transparent]"/>
 		<style_entry name="highlight_color" value="[hoverColor]"/>
 		<style_entry name="holding_color" value="[white]"/>
 		<style_entry name="width" value="50"/>
@@ -928,5 +928,111 @@
 		<style_entry name="invalid_sprite" value="ui_game_symbol_x"/>
 		<style_entry name="width" value="603"/>
 		<style_entry name="height" value="400"/>
+	</style>
+	<!-- VALMOD -->
+	<style name="itemStackCombine">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackOven">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="[transparent]"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackArmory">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackDecor">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackCement">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackBench">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackChem">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
 	</style>
 </styles>

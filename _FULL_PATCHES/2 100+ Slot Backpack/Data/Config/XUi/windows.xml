@@ -75,10 +75,10 @@
 	</window>
 
 	<!-- Crafting Recipes List Start -->
-	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
+	<!--#$-IGS BEGIN: Adding cursor area. -$#-->	
 	<window name="windowCraftingList" width="400" height="450" controller="CraftingListInfo" panel="Left" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<sprite depth="1" name="backgroundMain" pos="0,0" width="400" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />	
 	<sprite depth="1" name="backgroundMainmenu" pos="-50,0" width="45" height="397" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMainsearch" pos="0,-55" width="255" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -135,7 +135,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowCraftingQueue" width="0" panel="Center" depth="10" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-		<rect depth="0" pos="-210,-410" width="50" controller="CraftingQueue">
+		<rect depth="0" pos="-210,-310" width="50" controller="CraftingQueue">
 			<grid name="queue" rows="1" cols="4" pos="0,-2" cell_width="50" cell_height="50" repeat_content="true">
 				<recipe_stack name="0"/>
 			</grid>
@@ -147,7 +147,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowLooting" pos="0,0" width="0" height="0" controller="LootWindow" panel="Left" anchor_side="left" visible="false" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<panel name="header" >
 		<!-- <sprite depth="1" name="headerbackground" atlas="itemIconAtlas" sprite="zompactlootheader"/> --><!-- Uncomment this line to enable a custom sprite. -->
 		<sprite depth="1" name="headerbackground" color="[zompact_lootbg]" width="600" height="50" pos="0,0" type="sliced" globalopacitymod="2" /><!-- Disable this line if you enable the above -->
@@ -170,7 +170,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowCreative" width="420" height="400" panel="Left" controller="CreativeWindow" normal_color="[iconColor]" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="420" height="62" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainmenu" pos="370,-65" width="50" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture name="zompactItemBackground" depth="2" size="420,62" texture="[zompact_creative]" material="Materials/Transparent Colored" pos="0,0" />
@@ -359,7 +359,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="craftingInfoPanel" width="350" height="0" controller="CraftingInfoWindow" style="crafting.info.window" panel="Center" cursor_area="true"> <!-- Height 300 -->
 	<!--#$-IGS END.-$#-->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="80,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="90,-50" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="qualityhr" pos="90,-205" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -429,7 +429,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="emptyInfoPanel" width="300" height="0" panel="Center" controller="InfoWindow" cursor_area="true"> <!-- Height 300 -->
 	<!--#$-IGS END.-$#-->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<sprite depth="2" name="headerhr" pos="10,-50" width="680" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="qualityhr" pos="10,-205" width="680" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMain" pos="0,0" width="700" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -452,7 +452,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="itemInfoPanel" width="350" height="0" controller="ItemInfoWindow" panel="Center" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<sprite depth="1" name="backgroundMainitem" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="headerhr" pos="10,-50" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="qualityhr" pos="10,-205" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -537,7 +537,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowBackpack" width="[zompact_backpackwindowwidth]" height="[zompact_backpackwindowheight]" panel="Center" controller="BackpackWindow" cursor_area="true" >
 	<!--#$-IGS END.-$#-->
-	<rect name="backpackposition" pos="0,-310">
+	<rect name="backpackposition" pos="0,-210">
 	<sprite depth="1" name="backgroundMainheader" pos="0,0" width="1008" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<texture depth="2" name="zompactItemBackground" size="1008,50" texture="[zompact_backpack]" material="Materials/Transparent Colored" pos="0,0" />
 		<button depth="3" name="btnSort" style="icon32px, press, hover" pos="15,-8" sprite="ui_game_symbol_backpack" tooltip_key="lblSortInventory" sound="[paging_click]" />
@@ -556,7 +556,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowWorkbench" width="400" height="0" panel="Center" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="workbenchposition" pos="710,0">
+	<rect name="workbenchposition" pos="710,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
@@ -588,7 +588,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowChemistry" width="400" height="0" panel="Center" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="chemistryposition" pos="710,0">
+	<rect name="chemistryposition" pos="710,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="burnTimeBG" pos="175,-255" width="120" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -644,7 +644,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowCement" width="400" height="0" panel="Center" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="cementposition" pos="710,0">
+	<rect name="cementposition" pos="710,100">
 	<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<texture depth="2" name="zompactItemBackground" size="200,250" texture="[zompact_workbench]" material="Materials/Transparent Colored" pos="0,0" />
@@ -665,7 +665,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowForge" width="400" height="0" panel="Center" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="forgeposition" pos="710,0">
+	<rect name="forgeposition" pos="710,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainbank" pos="205,0" width="90" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -748,7 +748,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowCampfire" width="400" height="0" panel="Center" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="campfireposition" pos="710,0">
+	<rect name="campfireposition" pos="710,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainoutput" pos="-130,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="burnTimeBG" pos="175,-255" width="120" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -860,7 +860,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowToolbelt" width="603" height="50" depth="5" anchor="CenterBottom" pos="-313, 110" backgroundcolor="[transparent]" controller="ToolbeltWindow" visible="{toolbeltvisible}" cursor_area="true">
 	<!--#$-IGS END.-$#-->	
-		<texture name="zompactItemBackground" depth="2" size="610,75" texture="[zompact_toolbelt]" material="Materials/Transparent Colored" pos="-5,0" />
+			<texture name="zompactItemBackground" depth="2" size="610,75" texture="[zompact_toolbelt]" material="Materials/Transparent Colored" pos="-5,0" />
 			<grid depth="3" name="inventory" rows="1" cols="8" pos="0,0" cell_width="75" cell_height="75" controller="Toolbelt" repeat_content="true">
 				<item_stack_toolbelt name="0"/>
 			</grid>
@@ -910,7 +910,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="CharacterFrameWindow" width="320" height="450" panel="Left" controller="CharacterFrameWindow" defaultcolor="[white]" hoveredcolor="[selectedColor]" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="320" height="490" color="[zompact_flatthemecolor]" type="sliced"  globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-37" width="300" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture depth="3" name="zompactCharBackground" size="320,500" texture="[zompact_charbg]" material="Materials/Transparent Colored" pos="0,0" />
@@ -973,7 +973,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="ActiveBuffsWindow" Controller="ActiveBuffWindow" width="290" height="0" panel="Center" cursor_area="true" >
 	<!--#$-IGS END.-$#-->
-	<rect name="activeposition" pos="710,0">
+	<rect name="activeposition" pos="710,100">
 		<sprite depth="1" name="backgroundMainitem" pos="0,0" width="290" height="300" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-30" width="270" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture depth="3" name="zompactActivebuffsBackground" size="290,300" texture="[zompact_activebuffbg]" material="Materials/Transparent Colored" pos="0,0" />
@@ -996,7 +996,7 @@
 
 	<!-- Buff Info Panel -->
 	<window name="buffInfoPanel" width="350" height="0" controller="BuffInfoWindow" panel="Center">
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 	<sprite depth="1" name="backgroundMainitem" pos="0,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="headerhr" pos="10,-50" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="2" name="qualityhr" pos="10,-205" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -1123,10 +1123,9 @@
 			</panel>
 		</panel>
 	</window>
-	
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="mapTracking" width="254" height="513" panel="Left" controller="MapWaypoint" cursor_area="true">
-	<!--#$-IGS END.-$#-->
+		<!--#$-IGS END.-$#-->
 		<sprite depth="1" name="backgroundMainheader" pos="-101,0" width="350" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMaintoolbar" pos="-101,-55" width="350" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainsearch" pos="-101,-105" width="350" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -1186,7 +1185,6 @@
 			</grid>
 		</panel>
 	</window>
-	
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="mapInvites" width="254" height="282" panel="Left" cursor_area="true">
 	<!--#$-IGS END.-$#-->
@@ -1211,7 +1209,6 @@
 		</grid>
 
 	</window>
-	
 	<!-- #$-IGS BEGIN: Adding a ps4/xb1 text field, moved the rect's and panel's positions to accomidate a longer label text-$#-->
 	<!--#$-IGS BEGIN: Console additions. -$#-->
 	<window name="players" width="1126" height="746" panel="Center" cursor_area="true">
@@ -1299,11 +1296,12 @@
 		</rect>
 	</window>
 	<!-- #$-IGS END-$# -->
+	
 	<!-- Minibike Interaction Start -->
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowVehicleStats" width="0" height="0" panel="Center" controller="VehicleStats" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="vehiclecontainer" width="300" height="250" pos="715,0" controller="VehicleFrameWindow">
+	<rect name="vehiclecontainer" width="300" height="250" pos="715,100" controller="VehicleFrameWindow" >
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="300" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-30" width="280" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainrefuel" pos="-335,-255" width="75" height="50" color="[zompact_button]" type="sliced" fillcenter="true" globalopacitymod="2" />	
@@ -1395,7 +1393,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowVehicleStorage" width="[zompact_minibikebasketwidth]" height="[zompact_minibikebasketheight]" depth="5" panel="Left" backgroundcolor="[black]" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="[zompact_minibikebasketwidth]" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<!-- <texture depth="2" name="zompactItemBackground" size="[zompact_minibikebasketthemebgvalue]" texture="[zompact_minibikebasket]" material="Materials/Transparent Colored" pos="0,0" /> -->
 		<sprite depth="2" name="windowIcon" size="30,30" pos="5,-7" sprite="ui_game_symbol_loot_sack" color="[zompact_windownameicons]"/>
@@ -1419,7 +1417,7 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowAssemble" width="0" height="0" panel="Center" controller="AssembleWindow" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-	<rect name="assemblecontainer" width="300" height="250" pos="710,0">
+	<rect name="assemblecontainer" width="300" height="250" pos="710,100">
 		<sprite depth="1" name="backgroundMainclosebtn" pos="-335,-255" width="75" height="50" color="[zompact_button]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainitem" pos="0,0" width="300" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-30" width="280" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -1651,7 +1649,6 @@
 			</panel> -->
 		</panel>
 	</window>
-	
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowQuestList" width="450" height="513" panel="Left" controller="QuestListWindow" cursor_area="true">
 	<!--#$-IGS END.-$#-->	
@@ -1688,7 +1685,6 @@
 			<quest_entry name="0" />
 		</grid>	
 	</window>
-	
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowQuestDescription" width="753" height="400" panel="Center" controller="QuestDescriptionWindow" cursor_area="true">
 	<!--#$-IGS END.-$#-->
@@ -1871,7 +1867,6 @@
 			<quest_objective_tracker_entry />
 		</grid>
 	</window>
-	
 	<!--#$-IGS BEGIN: Adding cursor area. Expanding the quest offer window to accommodate other lanugagues longer descriptions-$#-->
 	<window name="windowQuestOffer" width="606" height="413" pos="-300, 150" controller="QuestOfferWindow" anchor="CenterCenter" pivot="center" depth="15">
 		<sprite depth="1" name="backgroundMain" pos="0,0" width="606" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -2080,7 +2075,7 @@
 
 	<!-- Trader Window Start -->
 	<window name="windowTrader"  width="400" height="0" panel="Center" controller="TraderWindow">
-	<rect name="position" width="350" height="488" pos="-410,0">
+	<rect name="position" width="350" height="488" pos="-410,100">
 	<sprite depth="1" name="backgroundMainheader" pos="0,0" width="400" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMainmenu" pos="-50,0" width="45" height="545" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 	<sprite depth="1" name="backgroundMainsearch" pos="0,-55" width="255" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -2241,7 +2236,7 @@
 
 	<!-- Vending Machine Service Panel Start -->
 	<window name="serviceInfoPanel" width="350" height="0" controller="ServiceInfoWindow" panel="Center">
-	<rect name="position" pos="0,0">
+	<rect name="position" pos="0,100">
 		<sprite depth="1" name="backgroundMain" pos="80,0" width="200" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="90,-50" width="180" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainstats" pos="285,0" width="330" height="120" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -2279,7 +2274,7 @@
 	<!-- Vending Machine Service Panel End -->
 
 	<window name="windowPowerSourceStats" width="0" height="0" panel="Center" controller="PowerSourceStats" >
-		<rect name="assemblecontainer" width="300" height="250" pos="710,0">
+		<rect name="assemblecontainer" width="300" height="250" pos="710,100">
 		<sprite depth="1" name="backgroundMainclosebtn" pos="-335,-255" width="75" height="50" color="[zompact_button]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainitem" pos="0,0" width="300" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-30" width="280" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
@@ -2360,7 +2355,7 @@
 	</window>
 
 	<window name="windowPowerTriggerOptions" width="0" height="0" panel="Center" controller="PowerTriggerOptions" cursor_area="true" >
-		<rect name="assemblecontainer" width="300" height="250" pos="710,0">
+		<rect name="assemblecontainer" width="300" height="250" pos="710,100">
 		<sprite depth="1" name="backgroundMainitem" pos="0,0" width="300" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="2" name="headerhr" pos="10,-30" width="280" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<sprite depth="1" name="backgroundMainrefuel" pos="-335,-255" width="150" height="50" color="[zompact_button]" type="sliced" fillcenter="true" globalopacitymod="2" />	
@@ -2426,7 +2421,7 @@
 	</window>
 
 	<window name="windowPowerTrapSlots" width="0" height="0" panel="Center" cursor_area="true">
-		<rect name="assemblecontainer" width="300" height="250" pos="710,0">
+		<rect name="assemblecontainer" width="300" height="250" pos="710,100">
 		<sprite depth="1" name="backgroundMainrefuel" pos="-335,-255" width="150" height="50" color="[zompact_button]" type="sliced" fillcenter="true" globalopacitymod="2" />	
 		<texture depth="2" name="zompactburnBackground" size="150,50" texture="[zompact_burnbtnbg]" material="Materials/Transparent Colored" pos="-335,-255" />	
 		<panel pos="9999,9999">
@@ -2457,7 +2452,7 @@
 	</window>
 
 	<window name="windowPowerRangedTrapOptions" width="0" height="0" panel="Center" controller="PowerRangedTrapOptions" cursor_area="true" >
-		<rect name="assemblecontainer" width="300" height="250" pos="710,0">
+		<rect name="assemblecontainer" width="300" height="250" pos="710,100">
 		<sprite depth="1" name="backgroundMain" pos="0,-255" width="300" height="50" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 		<texture depth="2" name="zompactItemBackground" size="300,50" texture="[zompact_assembly]" material="Materials/Transparent Colored" pos="0,-255" />
 		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header" pos="9999,9999">
@@ -2868,7 +2863,7 @@
 	</window>
 
 	<window name="windowPowerCameraControlPreview" width="0" height="0" panel="Center" controller="CameraWindow" cursor_area="true">
-		<rect name="previewcontainer" width="300" height="250" pos="710,0">
+		<rect name="previewcontainer" width="300" height="250" pos="710,100">
 			<sprite depth="1" name="backgroundMainitem" pos="0,0" width="300" height="250" color="[zompact_flatthemecolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 			<sprite depth="2" name="headerhr" pos="10,-30" width="280" height="2" color="[zompact_flatthemehrcolor]" type="sliced" fillcenter="true" globalopacitymod="2" />
 			<texture depth="3" name="zompactItemBackground" size="300,250" texture="[zompact_assembly]" material="Materials/Transparent Colored" pos="0,0" />

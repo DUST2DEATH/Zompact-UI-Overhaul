@@ -10,6 +10,7 @@
 		<window_group name="character" controller="XUiC_CharacterSheetWindowGroup">
 			<window name="CharacterFrameWindow"/>
 			<window name="buffInfoPanel"/>
+			<window name="PlayerStatsWindow" />
 			<window name="ActiveBuffsWindow" />
 		</window_group>		
 		
@@ -17,7 +18,9 @@
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowCampfire"/> <!-- Campfire //D2D -->
+			<window name="windowToolsCampfire" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
 		
@@ -25,7 +28,10 @@
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowForge" /><!-- Forge //D2D -->
+			<window name="windowToolsForge" />
+			<window name="windowFuel" />
+			<window name="windowForgeInput" />
+			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
 		
@@ -33,7 +39,7 @@
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowCement" /><!-- Cement //D2D -->
+			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>		
 		
@@ -41,15 +47,17 @@
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowWorkbench"/><!-- Workbench //D2D -->
+			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
+			<window name="windowCombine" />
 		</window_group>				
 
 		<window_group name="workstation_chemistryStation" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowChemistry"/><!-- Chemistry //D2D -->
+			<window name="windowFuel" />
+			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
 		
@@ -116,6 +124,7 @@
 		</window_group>
 		
 		<window_group name="vehicle" controller="XUiC_VehicleWindowGroup">
+			<window name="windowVehicle"/>
 			<window name="windowNonPagingHeader" />
 			<window name="windowVehicleStats" />
 			<window name="windowVehicleStorage" />
@@ -158,6 +167,8 @@
 		<window_group name="quests" controller="XUiC_QuestWindowGroup">
 			<window name="windowQuestList" />
 			<window name="windowQuestDescription" />
+			<window name="windowQuestObjectives" />
+			<window name="windowQuestRewards" />
 		</window_group>
 		
 		<window_group name="journal" controller="XUiC_JournalWindowGroup">
@@ -193,6 +204,7 @@
 		
 		<window_group name="powersource" controller="XUiC_PowerSourceWindowGroup">
 			<window name="windowPowerSourceStats" />
+			<window name="windowPowerSourceSlots" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
 		

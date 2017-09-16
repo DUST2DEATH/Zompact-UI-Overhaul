@@ -1,0 +1,655 @@
+<styles>
+	<style name="itemStackToolbelt">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[zompact_highlight]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="75"/>
+		<style_entry name="height" value="75"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackClothing">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="[mediumGrey]"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="59"/>
+		<style_entry name="height" value="59"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<global>
+		<!-- 	
+			GLOBAL STYLE ENTRIES
+				Any entry in global is accessible by [name] example: value="[white]" 
+				These values are also accessible from window and control xml files 
+				as long as this style file is included in a window file.
+		-->
+		<!-- ZOMPACT NAMED THEME ENTRIES START -->
+		<!--
+		To install a theme, create your images using the sizes below (in W x H), then insert the referenced location into each variable.
+		You can use a single image for the entire window(most*), or alternatively fill in the header variables to layer another over the background image. (*Trader and Crafting list are the exception to a single image, as items from 2 seperate windows converge)
+		
+		If you are changing only a couple items, you can host the image online. reference @url
+		If you are theming the entire UI, they must be a local reference. The game will choke (CPU pegged 100%) trying to load to the main menu if everything is referenced online. (4790K/16GB/1080/SSD 100Mb/40Mb fibre connection, imgur host for those wondering)
+		To use a offline image, the referenced location must be @file:Mods\Zompact\Themes\[YOURTHEME]\[YOURIMG.EXT] (mod folder inside the 7days directory. PNG or JPG. OPTIMIZE OR LAG!!! Dont use a 800Kb PNG when you can use a 30Kb or less JPG)
+		I have no idea what would happen if you attempted to load a individual image into each element. 
+		
+		The Storage/Loot window header, Quest Tracker must be a custom sprite as the windows resize automatically. 
+		Cant really do much that looks nice IMO (not that Ive worked out anyway), so instead, change the colour and opacity to whatever you like via named Zompact Colour Entry to match your theme.
+		If you wish to use a image here, you will need to uncomment the necessary sprite(s) to enable. Make sure to disable the other background sprite(s) by commenting it(them) out. see comments next to 'variables'.
+		
+		Resetting any value to @file:Mods\Zompact\Themes\zompactfill.png will use system defaults.
+		
+		**** A VALUE MUST BE SET - CAN NOT BE NULL***
+		-->
+		<style_entry name="zompact_compass" value="@file:Mods\Zompact\Themes\diablo\compass.jpg"/><!-- 595 x 31 Compass Background-->
+		<style_entry name="zompact_hudleft" value="@file:Mods\Zompact\Themes\diablo\hudleft.png"/><!-- 635 x 42 World Stats Background--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
+		<style_entry name="zompact_hudright" value="@file:Mods\Zompact\Themes\diablo\hudright.png"/><!-- 635 x 42 Player PVE/PVP Stats--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
+		<style_entry name="zompact_hudbuffbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 640 x 95 OPTIONAL background to the hud buffs display. NO CUSTOMIZABLE CELLS for these.(All cells are drawn at all times even if not used by a buff) -->
+		<style_entry name="zompact_hudclothingbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 640 x 95 OPTIONAL background to the hud clothing display, seperate to the cells-->
+		<style_entry name="zompact_hudshwf" value="@file:Mods\Zompact\Themes\diablo\hudshwf.png"/><!-- 150 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
+		<style_entry name="zompact_hudvehicle" value="@file:Mods\Zompact\Themes\diablo\hudvehicle.png"/><!-- 200 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
+		<style_entry name="zompact_toolbelt" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 610 x 75 --><!-- Optional, not necessary, little room left/right no room available top/bottom. pointless really, its there if you want to use it -->
+		<style_entry name="zompact_xpoverlay" value="@file:Mods\Zompact\Themes\diablo\xpbar.png"/><!-- 1783 x 6 --><!-- Must be an overlay, transparent section for the fill bar -->
+		<style_entry name="zompact_activeitembg" value="@file:Mods\Zompact\Themes\diablo\activeitem.png"/><!-- 162 x 70 Active Item Background / Ammo Counter Background-->
+		<style_entry name="zompact_collecteditembg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 162 x 43 Collected Item Background -->
+		<style_entry name="zompact_toolbeltcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/> <!-- 75 x 75 --><!-- Toolbelt Cell background. Hud numbering will be hidden if this field is filled. If you want to keep hud numbers but change background and border colours do so below zompact_toolbeltcellcbg / zompact_toolbeltcellcbr -->
+		<style_entry name="zompact_clothingcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 59 x 59 --><!--Hud clothing cell background -->
+		<!-- Zompact Colours Start -->
+		<!-- Main HUD -->
+		<style_entry name="zompact_xpbg" value="120,120,120,255"/> <!-- HUD Player XP bar background color 120,120,120,255 default-->
+		<style_entry name="zompact_xp" value="[darkorange]"/> <!-- HUD Player XP bar colour 235,235,235,255 default-->
+		<style_entry name="zompact_trackerbg" value="52,52,52,150"/><!-- HUD Quest tracker Background color/opacity. A custom sprite can be enabled here if you want to create one. name it: zompacttracker.png (enable sprite in windows.xml (search zompacttracker))-->
+		<style_entry name="zompact_questtrackertext" value="[white]"/><!-- HUD Quest tracker text colour -->
+		<style_entry name="zompact_toolbeltcellcbg" value="52,52,52,0"/><!-- HUD Toolbelt cell coloured sprite background. Change this value to change the color of the toolbelt cell background. WARNING! zompact_toolbeltcell overrides this option -->
+		<style_entry name="zompact_toolbeltcellcbr" value="40,40,40,0"/><!-- HUD Toolbelt cell coloured sprite border. Change this value to change the color of the toolbelt cell border. WARNING! zompact_toolbeltcell overrides this option -->
+		<style_entry name="zompact_activeitem" value="52,52,52,150"/><!-- HUD Active Item Background color/opacity. A custom background can be applied here from the Main Hud Section at the top if you wish. -->
+		<style_entry name="zompact_activeitemtext" value="[white]"/><!-- HUD active item text colour (ammo counter) -->
+		<style_entry name="zompact_collecteditem" value="52,52,52,150"/><!-- HUD Collected Item background color/opacity. A custom background can be applied here from the Main Hud Section at the top if you wish.-->
+		<style_entry name="zompact_collecteditemtext" value="[white]"/><!-- HUD collected item text colour -->
+		<style_entry name="zompact_hudcompassbgcolour" value="[black]"/><!-- HUD compass background colour -->
+		<style_entry name="zompact_hudcompassbrcolour" value="[red]"/><!-- HUD compass border colour -->
+		<style_entry name="zompact_hudshwficons" value="[white]"/><!-- HUD Stamina/health/water/food icons colour -->
+		<style_entry name="zompact_hudshwftext" value="[white]"/><!-- HUD Stamina/health/water/food text colour -->
+		<style_entry name="zompact_hudstatbarcolour" value="52,52,52,255"/><!-- HUD world/player stat bar background colour -->
+		<style_entry name="zompact_hudlefttext" value="[white]"/><!-- HUD world stats bar text colour -->
+		<style_entry name="zompact_hudlefticons" value="[white]"/><!-- HUD world stats bar icon colour -->
+		<style_entry name="zompact_hudrighttext" value="[white]"/><!-- HUD Player PVP/PVE bar text colour -->
+		<style_entry name="zompact_hudrighticons" value="[white]"/><!-- HUD Player PVP/PVE bar icon colour -->
+		<style_entry name="zompact_hudactivebufftext" value="[white]"/><!-- HUD active buff %/Timer colour -->
+		<style_entry name="zompact_hudvehicleicons" value="[white]"/><!-- HUD minibike bar icon colour -->
+		<style_entry name="zompact_hudvehicletext" value="[white]"/><!-- HUD minibike bar text colour -->
+		<!-- Hover/Selected Colours -->
+		<style_entry name="zompact_highlight" value="255,0,0,255"/> <!-- highlight color on hover - toolbelt -->
+		<style_entry name="zompact_holding" value="255,0,0,255"/> <!-- selected item color - toolbelt -->
+		<!-- Additional Colour Sets -->
+		<style_entry name="blue" value="0,0,255"/>
+		<style_entry name="orange" value="255,128,0"/>
+		<style_entry name="yellow" value="255,255,0"/>
+		<style_entry name="purple" value="128,0,128"/>
+		<style_entry name="pink" value="255,192,203"/>
+		<style_entry name="gold" value="255,215,0"/>
+		<style_entry name="chocolate" value="210,105,30"/>
+		<style_entry name="teal" value="0,128,128"/>
+		<style_entry name="indianred" value="176,23,31"/>
+		<style_entry name="lightpink" value="255,182,193"/>
+		<style_entry name="hotpink" value="255,105,180"/>
+		<style_entry name="fuchsia" value="255,0,255"/>
+		<style_entry name="darkviolet" value="148,0,211"/>
+		<style_entry name="indigo" value="75,0,130"/>
+		<style_entry name="mediumpurple" value="147,112,219"/>
+		<style_entry name="lightslateblue" value="132,112,255"/>
+		<style_entry name="royalblue" value="65,105,225"/>
+		<style_entry name="lightsteelblue" value="176,196,222"/>
+		<style_entry name="skyblue" value="135,206,235"/>
+		<style_entry name="turquoiseblue" value="0,199,140"/>
+		<style_entry name="mediumspringgreen" value="0,250,154"/>
+		<style_entry name="mediumseagreen" value="60,179,113"/>
+		<style_entry name="emeraldgreen" value="0,201,87"/>
+		<style_entry name="cobaltgreen" value="61,145,64"/>
+		<style_entry name="lime" value="50,205,50"/>
+		<style_entry name="darkgreen" value="0,100,0"/>
+		<style_entry name="greenyellow" value="173,255,47"/>
+		<style_entry name="olive" value="128,128,0"/>
+		<style_entry name="khaki" value="240,230,140"/>
+		<style_entry name="goldenrod" value="218,165,32"/>
+		<style_entry name="darkorange" value="255,140,0"/>
+		<style_entry name="sandybrown" value="244,164,96"/>
+		<style_entry name="orangered" value="255,69,0"/>
+		<style_entry name="darkred" value="139,0,0"/>
+		<!-- Zompact Colours End-->
+		<!--NAMED COLORS-->
+		<style_entry name="limeGreen" 		value="222,255,163,255"/>
+		<style_entry name="tan" 					value="182,166,123,255"/>
+		<style_entry name="beige" 				value="222,206,163"/>
+		<style_entry name="borderColor" 	value="0,0,0"/>
+		<style_entry name="darkGrey" 		value="64,64,64"/>
+		<style_entry name="mediumGrey" 	value="96,96,96"/>
+		<style_entry name="lightGrey" 		value="128,128,128"/>
+		<style_entry name="white" 				value="255,255,255"/>
+		<style_entry name="black" 				value="0,0,0"/>
+		<style_entry name="red" 					value="255,0,0"/>
+		<style_entry name="green" 					value="0,255,0"/>
+		<style_entry name="transparent" 	value="0,0,0,0"/>
+		
+		<style_entry name="white_half_alpha" 				value="255,255,255,128"/>
+		<style_entry name="mediumGrey_half_alpha" 	value="96,96,96,128"/>
+		<style_entry name="darkGrey_half_alpha" 		value="64,64,64,128"/>
+		<style_entry name="black_half_alpha" 				value="0,0,0,128"/>
+		
+		<style_entry name="white_quarter_alpha" 			value="255,255,255,192"/>
+		
+		<style_entry name="iconColor" 						value="255,255,255" />
+		<style_entry name="labelColor" 						value="255,255,255" />
+		<style_entry name="selectedColor" 					value="222,206,163" />
+		<style_entry name="hoverColor"						value="250,255,163" />
+		
+		<style_entry name="disabledLabelColor"				value="160,160,160" />
+		
+		<!--NAMED SPRITES-->
+		<style_entry name="default_sprite" value="menu_empty"/>
+		
+		<!--NAMED SOUNDS-->
+		<style_entry name="default_click" 	value="/UI/ui_menu_click"/>
+		<style_entry name="start" 				value="/UI/ui_menu_start"/>
+		<style_entry name="back" 				value="/UI/ui_menu_back"/>
+		<style_entry name="craft_click" 		value="/Crafting/craft_click_craft"/>
+		<style_entry name="paging_click"		value="/UI/ui_tab" />
+		<style_entry name="recipe_click" 	value="/Crafting/craft_click_recipe"/>
+		<style_entry name="pickup_click" 	value="/Crafting/craft_take_item"/>
+		<style_entry name="place_click" 	value="/Crafting/craft_place_item"/>
+		<style_entry name="remove_waypoint" 	value="/UI/ui_waypoint_delete"/>
+	</global>
+	
+	<!--LABELS-->
+	<style type="label">
+		<style_entry name="color" value="[labelColor]"/>
+		<style_entry name="font_face" value="AgencyB_32p"/>
+		<style_entry name="font_size" value="28"/>
+		<style_entry name="justify" value="left"/>
+		<style_entry name="effect" value="none"/>
+		<style_entry name="pivot" value="topleft"/>
+		<style_entry name="text" value=""/>
+		<style_entry name="upper_case" value="true" />
+	</style>
+	
+	<style type="label" name="protection">
+		<style_entry name="width" value="50"/>
+		<style_entry name="height" value="28"/>
+		<style_entry name="font_size" value="26"/>
+	</style>
+	
+	<style type="label" name="icon30px">
+		<style_entry name="width" value="30"/>
+		<style_entry name="height" value="30"/>
+	</style>
+	
+	<!--SPRITES-->
+	<style type="sprite">
+		<style_entry name="atlas" value="UIAtlas"/>
+		<style_entry name="sprite" value="[default_sprite]"/>
+		<style_entry name="color" value="[white]"/>
+	</style>
+	
+	<style type="sprite" name="protection">
+		<style_entry name="color" value="[iconColor]"/>
+		<style_entry name="width" value="26"/>
+		<style_entry name="height" value="26"/>
+		<style_entry name="foregroundlayer" value="true"/>
+	</style>
+	
+	<style type="sprite" name="icon48px">
+		<style_entry name="color" value="[iconColor]"/>
+		<style_entry name="width" value="48"/>
+		<style_entry name="height" value="48"/>
+		<style_entry name="foregroundlayer" value="true" />
+	</style>
+	
+	<style type="sprite" name="icon32px">
+		<style_entry name="color" value="[iconColor]"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="foregroundlayer" value="true" />
+	</style>
+	
+	<style type="sprite" name="icon30px">
+		<style_entry name="color" value="[iconColor]"/>
+		<style_entry name="width" value="30"/>
+		<style_entry name="height" value="30"/>
+		<style_entry name="foregroundlayer" value="true" />
+	</style>
+	
+	<style type="sprite" name="icon22px">
+		<style_entry name="color" value="[iconColor]"/>
+		<style_entry name="width" value="22"/>
+		<style_entry name="height" value="22"/>
+		<style_entry name="foregroundlayer" value="true" />
+	</style>
+	
+	<!--BUTTONS-->
+	<style type="button">
+		<style_entry name="atlas" value="UIAtlas"/>
+		<style_entry name="sprite" value="[default_sprite]"/>
+		<style_entry name="defaultcolor" value="[iconColor]"/>
+		<style_entry name="hovercolor" value="[hoverColor]" />
+		<style_entry name="selectedcolor" value="[selectedColor]" />
+		<style_entry name="hoverscale" value="1.25" />
+	</style>
+	
+	<style type="button" name="icon32px">
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="foregroundlayer" value="true" />
+	</style>
+	
+	<style type="button" name="icon30px">
+		<style_entry name="width" value="30"/>
+		<style_entry name="height" value="30"/>
+		<style_entry name="foregroundlayer" value="true" />
+	</style>
+	
+	<style type="button" name="icon22px">
+		<style_entry name="width" value="22"/>
+		<style_entry name="height" value="22"/>
+		<style_entry name="foregroundlayer" value="true" />
+	</style>
+	
+	<!--ITEM STACKS-->
+	<style name="itemStack">
+		<style_entry name="select_color" value="[beige]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="[mediumGrey]"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="72"/>
+		<style_entry name="height" value="72"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	
+	<style name="vehicleStack">
+		<style_entry name="background_color" value="[darkGrey]"/>
+		<style_entry name="highlight_color" value="[lightGrey]"/>
+		<style_entry name="width" value="374"/>
+		<style_entry name="height" value="58"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	
+	<style name="itemPartStack">
+		<style_entry name="background_color" value="[darkGrey]"/>
+		<style_entry name="highlight_color" value="[mediumGrey]"/>
+		<style_entry name="width" value="374"/>
+		<style_entry name="height" value="58"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	
+	<!--USER INTERACTION-->
+	<style name="press">
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound" value="[default_click]"/>
+		<style_entry name="sound_play_on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+	</style>
+	
+	<style name="hover">
+		<style_entry name="on_hover" value="true"/>
+		<style_entry name="highlight_color" value="[zompact_highlight]"/>
+		<style_entry name="holding_color" value="[zompact_holding]"/>
+	</style>
+	
+	<style name="scroll">
+		<style_entry name="on_scroll" value="true"/>
+	</style>
+	
+	<style name="drag">
+		<style_entry name="on_drag" value="true"/>
+	</style>
+	
+	<style name="header.panel" type="panel">
+		<style_entry name="name" value="header"/>
+		<style_entry name="height" value="43"/>
+		<style_entry name="depth" value="1"/>
+		<style_entry name="backgroundspritename" value="ui_game_panel_header"/>
+	</style>
+	
+	<style name="header.icon" type="sprite">
+		<style_entry name="name" value="windowIcon"/>
+		<style_entry name="depth" value="2"/>
+		<style_entry name="pos" value="5,-5"/>
+		<style_entry name="size" value="32,32"/>
+	</style>
+	
+	<style name="header.name" type="label">
+		<style_entry name="name" value="windowName"/>
+		<style_entry name="depth" value="2"/>
+		<style_entry name="pos" value="42,-6"/>
+		<style_entry name="size" value="250,32"/>
+		<style_entry name="font_size" value="32"/>
+	</style>
+	
+	<style name="header.timer" type="label">
+		<style_entry name="name" value="burnTimeLeft"/>
+		<style_entry name="depth" value="2"/>
+		<style_entry name="size" value="64,28"/>
+		<style_entry name="text" value="00:00"/>
+		<style_entry name="font_size" value="26"/>
+		<style_entry name="color" value="[mediumGrey]"/>
+		<style_entry name="justify" value="right"/>
+		<style_entry name="anchor_side" value="right"/>
+		<style_entry name="pivot" value="right"/>
+		<style_entry name="anchor_run_once" value="false"/>
+		<style_entry name="anchor_offset" value="-68,0"/>
+	</style>
+	
+	<!--PAGING WINDOW-->
+	<style name="paging.window" type="window">
+		<style_entry name="pos" value="-310,-9"/>
+		<style_entry name="size" value="600,43"/>
+		<style_entry name="anchor" value="CenterTop"/>
+		<style_entry name="normal_color" value="[iconColor]" />
+		<style_entry name="select_color" value="[selectedColor]" />
+		<style_entry name="hover_color" value="[lightGrey]" />
+	</style>
+	
+	<!--PAGING WINDOW TITLE-->
+	<style name="paging.window.name" type="label">
+		<style_entry name="depth" value="4"/>
+		<style_entry name="font_size" value="36"/>
+		<style_entry name="pivot" value="center"/>
+		<style_entry name="justify" value="center"/>
+		<style_entry name="pos" value="300,-20"/>
+		<style_entry name="name" value="lblWindowName"/>
+	</style>
+	
+	<!--PAGING WINDOW BACKGROUND-->
+	<style name="paging.window.background.border" type="sprite">
+		<style_entry name="depth" value="0"/>
+		<style_entry name="sprite" value="ui_game_header_fill"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="color" value="[black]"/>
+	</style>
+	
+	<style name="paging.window.background" type="sprite">
+		<style_entry name="depth" value="1"/>
+		<style_entry name="sprite" value="ui_game_header_fill"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="size" value="594,37"/>
+		<style_entry name="pos" value="3,-3"/>
+		<style_entry name="color" value="[lightGrey]"/>
+	</style>
+	
+	<style name="paging.window.name.background" type="sprite">
+		<style_entry name="depth" value="2"/>
+		<style_entry name="sprite" value="ui_game_header_insert"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="pivot" value="center"/>
+		<style_entry name="size" value="200,38"/>
+		<style_entry name="pos" value="300,-21"/>
+		<style_entry name="color" value="[black]"/>
+	</style>
+	
+	<style name="paging.window.name.foreground" type="sprite">
+		<style_entry name="depth" value="3"/>
+		<style_entry name="sprite" value="ui_game_header_fill_gradient"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="pivot" value="center"/>
+		<style_entry name="size" value="200,38"/>
+		<style_entry name="pos" value="300,-21"/>
+		<style_entry name="color" value="[white_half_alpha]"/>
+	</style>
+	
+	<!--PAGING WINDOW ICONS-->
+	<style name="paging.window.icon.crafting" type="button">
+		<style_entry name="sound" value="[paging_click]"/>
+		<style_entry name="pos" value="31,-21"/>
+		<style_entry name="depth" value="3"/>
+		<style_entry name="name" value="Crafting"/>
+		<style_entry name="sprite" value="ui_game_symbol_hammer"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="tooltip" value="CRAFTING" />
+		<style_entry name="tooltip_key" value="xuiCrafting" />
+		<style_entry name="hoverscale" value="1.25" />
+		<style_entry name="pivot" value="center" />
+	</style>
+	
+	<style name="paging.window.icon.character" type="button">
+		<style_entry name="sound" value="[paging_click]"/>
+		<style_entry name="pos" value="76,-21"/>
+		<style_entry name="depth" value="3"/>
+		<style_entry name="name" value="Character"/>
+		<style_entry name="sprite" value="ui_game_symbol_character"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="tooltip" value="CHARACTER" />
+		<style_entry name="tooltip_key" value="xuiCharacter" />
+		<style_entry name="hoverscale" value="1.25" />
+		<style_entry name="pivot" value="center" />
+	</style>
+	
+	<style name="paging.window.icon.map" type="button">
+		<style_entry name="sound" value="[paging_click]"/>
+		<style_entry name="pos" value="126,-21"/>
+		<style_entry name="depth" value="3"/>
+		<style_entry name="name" value="Map"/>
+		<style_entry name="sprite" value="ui_game_symbol_map"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="tooltip" value="MAP" />
+		<style_entry name="tooltip_key" value="xuiMap" />
+		<style_entry name="hoverscale" value="1.25" />
+		<style_entry name="pivot" value="center" />
+	</style>
+	
+	<style name="paging.window.icon.skills" type="button">
+		<style_entry name="sound" value="[paging_click]"/>
+		<style_entry name="pos" value="171,-21"/>
+		<style_entry name="depth" value="3"/>
+		<style_entry name="name" value="Skills"/>
+		<style_entry name="sprite" value="ui_game_symbol_skills"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="tooltip" value="SKILLS" />
+		<style_entry name="tooltip_key" value="xuiSkills" />
+		<style_entry name="hoverscale" value="1.25" />
+		<style_entry name="pivot" value="center" />
+	</style>
+	
+	<style name="paging.window.icon.quests" type="button">
+		<style_entry name="sound" value="[paging_click]"/>
+		<style_entry name="pos" value="426,-21"/>
+		<style_entry name="depth" value="3"/>
+		<style_entry name="name" value="Quests"/>
+		<style_entry name="sprite" value="ui_game_symbol_quest"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="tooltip" value="QUESTS" />
+		<style_entry name="tooltip_key" value="xuiQuests" />
+		<style_entry name="hoverscale" value="1.25" />
+		<style_entry name="pivot" value="center" />
+	</style>
+	
+	<style name="paging.window.icon.journal" type="button">
+		<style_entry name="sound" value="[paging_click]"/>
+		<style_entry name="pos" value="476,-21"/>
+		<style_entry name="depth" value="3"/>
+		<style_entry name="name" value="Journal"/>
+		<style_entry name="sprite" value="ui_game_symbol_pen"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="tooltip" value="JOURNAL" />
+		<style_entry name="tooltip_key" value="xuiJournal" />
+		<style_entry name="hoverscale" value="1.25" />
+		<style_entry name="pivot" value="center" />
+	</style>
+	
+	<style name="paging.window.icon.players" type="button">
+		<style_entry name="sound" value="[paging_click]"/>
+		<style_entry name="pos" value="526,-21"/>
+		<style_entry name="depth" value="3"/>
+		<style_entry name="name" value="Players"/>
+		<style_entry name="sprite" value="ui_game_symbol_players"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="tooltip" value="PLAYERS" />
+		<style_entry name="tooltip_key" value="xuiPlayers" />
+		<style_entry name="hoverscale" value="1.25" />
+		<style_entry name="pivot" value="center" />
+	</style>
+	
+	<style name="paging.window.icon.creative" type="button">
+		<style_entry name="sound" value="[paging_click]"/>
+		<style_entry name="pos" value="576,-21"/>
+		<style_entry name="depth" value="3"/>
+		<style_entry name="name" value="Creative"/>
+		<style_entry name="sprite" value="ui_game_symbol_lightbulb"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+		<style_entry name="tooltip" value="CREATIVE" />
+		<style_entry name="tooltip_key" value="xuiCreative" />
+		<style_entry name="hoverscale" value="1.25" />
+		<style_entry name="pivot" value="center" />
+	</style>
+	
+	<style name="nonpaging.window" type="window">
+		<style_entry name="pos" value="-200,-9"/>
+		<style_entry name="size" value="400,43"/>
+		<style_entry name="anchor" value="CenterTop"/>
+	</style>
+	
+	<style name="nonpaging.window.background" type="sprite">
+		<style_entry name="depth" value="1"/>
+		<style_entry name="sprite" value="ui_game_header_fill"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="size" value="394,37"/>
+		<style_entry name="pos" value="3,-3"/>
+		<style_entry name="color" value="[lightGrey]"/>
+	</style>
+	
+	<style name="nonpaging.window.name.background" type="sprite">
+		<style_entry name="depth" value="2"/>
+		<style_entry name="sprite" value="ui_game_header_insert"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="pivot" value="center"/>
+		<style_entry name="size" value="250,38"/>
+		<style_entry name="pos" value="200,-21"/>
+		<style_entry name="color" value="[black]"/>
+	</style>
+	
+	<style name="nonpaging.window.name.foreground" type="sprite">
+		<style_entry name="depth" value="3"/>
+		<style_entry name="sprite" value="ui_game_header_fill_gradient"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="pivot" value="center"/>
+		<style_entry name="size" value="200,38"/>
+		<style_entry name="pos" value="200,-21"/>
+		<style_entry name="color" value="[white_half_alpha]"/>
+	</style>
+	
+	<style name="nonpaging.window.name" type="label">
+		<style_entry name="depth" value="4"/>
+		<style_entry name="font_size" value="36"/>
+		<style_entry name="pivot" value="center"/>
+		<style_entry name="justify" value="center"/>
+		<style_entry name="pos" value="200,-20"/>
+		<style_entry name="name" value="lblWindowName"/>
+	</style>
+	
+	<style name="workstation.reserve.name" type="label">
+		<style_entry name="depth" value="2"/>
+		<style_entry name="height" value="24"/>
+		<style_entry name="width" value="53"/>
+	</style>
+	
+	<style name="workstation.reserve.weight" type="label">
+		<style_entry name="depth" value="2"/>
+		<style_entry name="height" value="24"/>
+		<style_entry name="width" value="74"/>
+		<style_entry name="color" value="[beige]"/>
+	</style>
+	
+	<style name="compass.window" type="window">
+		<style_entry name="pos" value="-310,37"/>
+		<style_entry name="size" value="595,30"/>
+		<style_entry name="anchor" value="CenterBottom"/>
+	</style>
+	
+	<style name="compass.window.background.border" type="sprite">
+		<style_entry name="depth" value="0"/>
+		<style_entry name="sprite" value="ui_game_header_fill"/>
+		<style_entry name="size" value="305,43"/>
+		<style_entry name="pos" value="48,0"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="color" value="0,0,0,100"/>
+	</style>
+	
+	<style name="compass.window.background" type="sprite">
+		<style_entry name="depth" value="1"/>
+		<style_entry name="sprite" value="ui_game_header_fill"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="size" value="300,37"/>
+		<style_entry name="pos" value="50,-3"/>
+		<style_entry name="color" value="128,128,128,100"/>
+	</style>
+	
+	<style name="compass.window.icon.compass" type="sprite">
+		<style_entry name="depth" value="3"/>
+		<style_entry name="name" value="crafting"/>
+		<style_entry name="sprite" value="ui_game_symbol_compass"/>
+		<style_entry name="width" value="32"/>
+		<style_entry name="height" value="32"/>
+	</style>
+	
+	<style name="compass.window.compass.background" type="sprite">
+		<style_entry name="depth" value="5"/>
+		<style_entry name="sprite" value="ui_game_header_fill"/>
+		<style_entry name="type" value="sliced"/>
+		<style_entry name="color" value="0,0,0,100"/>
+		<style_entry name="pos" value="50,-3"/>
+		<style_entry name="width" value="300" />
+		<style_entry name="height" value="37" />
+	</style>
+	
+	<style name="compass.window.compass.texture" type="texture">
+		<style_entry name="depth" value="8"/>
+		<style_entry name="height" value="25" />
+		<style_entry name="width" value="555" />
+		<style_entry name="pos" value="20,-10" />
+		<style_entry name="color" value="[iconColor]"/>
+		<style_entry name="tooltip" value="CHARACTER" />
+		<style_entry name="texture" value="Textures/UI/ui_game_compass" />
+	</style>
+	
+	<style name="crafting.info.window" type="window">
+		<style_entry name="valid_color" value="[green]"/>
+		<style_entry name="invalid_color" value="[red]"/>
+		<style_entry name="valid_sprite" value="ui_game_symbol_check"/>
+		<style_entry name="invalid_sprite" value="ui_game_symbol_x"/>
+		<style_entry name="width" value="603"/>
+		<style_entry name="height" value="400"/>
+	</style>
+</styles>

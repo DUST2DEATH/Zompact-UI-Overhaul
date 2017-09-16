@@ -976,5 +976,195 @@
 			<label depth="4" name="Name" pos="4,${Round(-height/2,0)|-15}" width="${width-8|242}" height="${height-4|26}" text="{name}" font_size="${height-4|26}" justify="center" pivot="left" />
 		</rect>
 	</spawners_entry>
+	<!-- Valmod -->
+	<!--#$-IGS BEGIN: Increasing collider scale to improve snap responsiveness -$#-->
+	<chem_item_stack>
+		<rect controller="RequiredItemStack" style="itemStackChem, hover" collider_scale="1.1">
+			<sprite depth="1" name="backgroundMainbg" pos="0,0" width="60" height="60" color="[zompact_reqcellcbg]" type="sliced" fillcenter="true" globalopacitymod="2" />
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="60" height="60" color="[zompact_reqcellcbr]" type="sliced" fillcenter="false" />	
+			<sprite depth="3" name="background" sprite="menu_empty3px" width="60" height="60" color="0,0,0,150" type="sliced" globalopacity="true" fillcenter="false"/>
+			<texture depth="2" name="zompactItemBackground" size="60,60" texture="[zompact_requiredcell]" material="Materials/Transparent Colored" pos="0,0" />
+			<sprite depth="4" name="highlightOverlay" width="60" height="60" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true"/>
+
+			<sprite depth="4" name="itemIcon" width="45" height="45" atlas="ItemIconAtlas" sprite="{itemicon}" pos="25,-25" pivot="center" foregroundlayer="true" color="{iconcolor}" />
+			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="" pos="2,-2" foregroundlayer="true"/>
+			
+			<sprite depth="3" name="durabilityBackground" width="5" height="48" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="1,-1" foregroundlayer="true"/>
+			<sprite depth="4" name="durability" width="5" height="48" sprite="menu_empty2px" color="[transparent]" type="filled" filldirection="vertical" pos="1,-1" foregroundlayer="true"/>
+			
+			<sprite depth="5" name="disabledOverlay" width="60" height="60" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+			
+			<label depth="7" name="stackValue" pos="-2,-30" width="50" height="23" text="{itemcount}" font_size="22" effect="outline" justify="right" color="[zompact_itemstackvaluetext]"/>
+			<label depth="7" name="timer" pos="35,-38" width="50" height="24" font_size="24" justify="center" pivot="center" effect="outline" color="[beige]"/>
+			<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="60" height="60" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+			<!--#$-IGS BEGIN: Setting itemName above the soft cursor. -$#-->
+			<label depth="12" name="itemName" pos="0,0" width="0" height="0" text="" font_size="26" justify="center" overflow="resizefreely" effect="outline" color="[zompact_itemstacknametext]"/>
+			<!--*#$-IGS END.-$#-->
+			<sprite depth="13" name="assembleIcon" size="40,40" sprite="ui_game_symbol_lock" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+		</rect>
+	</chem_item_stack>
+	<!--*#$-IGS END.-$#-->
+	<!--#$-IGS BEGIN: Increasing collider scale to improve snap responsiveness -$#-->
+	<bench_item_stack>
+		<rect controller="RequiredItemStack" style="itemStackBench, hover" collider_scale="1.1">
+			<sprite depth="1" name="backgroundMainbg" pos="0,0" width="60" height="60" color="[zompact_reqcellcbg]" type="sliced" fillcenter="true" globalopacitymod="2" />
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="60" height="60" color="[zompact_reqcellcbr]" type="sliced" fillcenter="false" />	
+			<sprite depth="3" name="background" sprite="menu_empty3px" width="60" height="60" color="0,0,0,150" type="sliced" globalopacity="true" fillcenter="false"/>
+			<texture depth="2" name="zompactItemBackground" size="60,60" texture="[zompact_requiredcell]" material="Materials/Transparent Colored" pos="0,0" />
+			<sprite depth="4" name="highlightOverlay" width="60" height="60" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true"/>
+
+			<sprite depth="4" name="itemIcon" width="45" height="45" atlas="ItemIconAtlas" sprite="{itemicon}" pos="25,-25" pivot="center" foregroundlayer="true" color="{iconcolor}" />
+			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="" pos="2,-2" foregroundlayer="true"/>
+			
+			<sprite depth="3" name="durabilityBackground" width="5" height="48" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="1,-1" foregroundlayer="true"/>
+			<sprite depth="4" name="durability" width="5" height="48" sprite="menu_empty2px" color="[transparent]" type="filled" filldirection="vertical" pos="1,-1" foregroundlayer="true"/>
+			
+			<sprite depth="5" name="disabledOverlay" width="60" height="60" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+			
+			<label depth="7" name="stackValue" pos="-2,-30" width="50" height="23" text="{itemcount}" font_size="22" effect="outline" justify="right" color="[zompact_itemstackvaluetext]"/>
+			<label depth="7" name="timer" pos="35,-38" width="50" height="24" font_size="24" justify="center" pivot="center" effect="outline" color="[beige]"/>
+			<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="60" height="60" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+			<!--#$-IGS BEGIN: Setting itemName above the soft cursor. -$#-->
+			<label depth="12" name="itemName" pos="0,0" width="0" height="0" text="" font_size="26" justify="center" overflow="resizefreely" effect="outline" color="[zompact_itemstacknametext]"/>
+			<!--*#$-IGS END.-$#-->
+			<sprite depth="13" name="assembleIcon" size="40,40" sprite="ui_game_symbol_lock" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+		</rect>
+	</bench_item_stack>
+	<!--*#$-IGS END.-$#-->
+	<!--#$-IGS BEGIN: Increasing collider scale to improve snap responsiveness -$#-->
+	<cement_item_stack>
+		<rect controller="RequiredItemStack" style="itemStackCement, hover" collider_scale="1.1">
+			<sprite depth="1" name="backgroundMainbg" pos="0,0" width="60" height="60" color="[zompact_reqcellcbg]" type="sliced" fillcenter="true" globalopacitymod="2" />
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="60" height="60" color="[zompact_reqcellcbr]" type="sliced" fillcenter="false" />	
+			<sprite depth="3" name="background" sprite="menu_empty3px" width="60" height="60" color="0,0,0,150" type="sliced" globalopacity="true" fillcenter="false"/>
+			<texture depth="2" name="zompactItemBackground" size="60,60" texture="[zompact_requiredcell]" material="Materials/Transparent Colored" pos="0,0" />
+			<sprite depth="4" name="highlightOverlay" width="60" height="60" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true"/>
+
+			<sprite depth="4" name="itemIcon" width="45" height="45" atlas="ItemIconAtlas" sprite="{itemicon}" pos="25,-25" pivot="center" foregroundlayer="true" color="{iconcolor}" />
+			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="" pos="2,-2" foregroundlayer="true"/>
+			
+			<sprite depth="3" name="durabilityBackground" width="5" height="48" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="1,-1" foregroundlayer="true"/>
+			<sprite depth="4" name="durability" width="5" height="48" sprite="menu_empty2px" color="[transparent]" type="filled" filldirection="vertical" pos="1,-1" foregroundlayer="true"/>
+			
+			<sprite depth="5" name="disabledOverlay" width="60" height="60" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+			
+			<label depth="7" name="stackValue" pos="-2,-30" width="50" height="23" text="{itemcount}" font_size="22" effect="outline" justify="right" color="[zompact_itemstackvaluetext]"/>
+			<label depth="7" name="timer" pos="35,-38" width="50" height="24" font_size="24" justify="center" pivot="center" effect="outline" color="[beige]"/>
+			<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="60" height="60" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+			<!--#$-IGS BEGIN: Setting itemName above the soft cursor. -$#-->
+			<label depth="12" name="itemName" pos="0,0" width="0" height="0" text="" font_size="26" justify="center" overflow="resizefreely" effect="outline" color="[zompact_itemstacknametext]"/>
+			<!--*#$-IGS END.-$#-->
+			<sprite depth="13" name="assembleIcon" size="40,40" sprite="ui_game_symbol_lock" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+		</rect>
+	</cement_item_stack>
+	<!--*#$-IGS END.-$#-->
+	<!--#$-IGS BEGIN: Increasing collider scale to improve snap responsiveness -$#-->
+	<decor_item_stack>
+		<rect controller="RequiredItemStack" style="itemStackDecor, hover" collider_scale="1.1">
+			<sprite depth="1" name="backgroundMainbg" pos="0,0" width="60" height="60" color="[zompact_reqcellcbg]" type="sliced" fillcenter="true" globalopacitymod="2" />
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="60" height="60" color="[zompact_reqcellcbr]" type="sliced" fillcenter="false" />	
+			<sprite depth="3" name="background" sprite="menu_empty3px" width="60" height="60" color="0,0,0,150" type="sliced" globalopacity="true" fillcenter="false"/>
+			<texture depth="2" name="zompactItemBackground" size="60,60" texture="[zompact_requiredcell]" material="Materials/Transparent Colored" pos="0,0" />
+			<sprite depth="4" name="highlightOverlay" width="60" height="60" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true"/>
+
+			<sprite depth="4" name="itemIcon" width="45" height="45" atlas="ItemIconAtlas" sprite="{itemicon}" pos="25,-25" pivot="center" foregroundlayer="true" color="{iconcolor}" />
+			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="" pos="2,-2" foregroundlayer="true"/>
+			
+			<sprite depth="3" name="durabilityBackground" width="5" height="48" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="1,-1" foregroundlayer="true"/>
+			<sprite depth="4" name="durability" width="5" height="48" sprite="menu_empty2px" color="[transparent]" type="filled" filldirection="vertical" pos="1,-1" foregroundlayer="true"/>
+			
+			<sprite depth="5" name="disabledOverlay" width="60" height="60" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+			
+			<label depth="7" name="stackValue" pos="-2,-30" width="50" height="23" text="{itemcount}" font_size="22" effect="outline" justify="right" color="[zompact_itemstackvaluetext]"/>
+			<label depth="7" name="timer" pos="35,-38" width="50" height="24" font_size="24" justify="center" pivot="center" effect="outline" color="[beige]"/>
+			<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="60" height="60" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+			<!--#$-IGS BEGIN: Setting itemName above the soft cursor. -$#-->
+			<label depth="12" name="itemName" pos="0,0" width="0" height="0" text="" font_size="26" justify="center" overflow="resizefreely" effect="outline" color="[zompact_itemstacknametext]"/>
+			<!--*#$-IGS END.-$#-->
+			<sprite depth="13" name="assembleIcon" size="40,40" sprite="ui_game_symbol_lock" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+		</rect>
+	</decor_item_stack>
+	<!--*#$-IGS END.-$#-->
+	<!--#$-IGS BEGIN: Increasing collider scale to improve snap responsiveness -$#-->
+	<armory_item_stack>
+		<rect controller="RequiredItemStack" style="itemStackArmory, hover" collider_scale="1.1">
+			<sprite depth="1" name="backgroundMainbg" pos="0,0" width="60" height="60" color="[zompact_reqcellcbg]" type="sliced" fillcenter="true" globalopacitymod="2" />
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="60" height="60" color="[zompact_reqcellcbr]" type="sliced" fillcenter="false" />	
+			<sprite depth="3" name="background" sprite="menu_empty3px" width="60" height="60" color="0,0,0,1" type="sliced" globalopacity="true" fillcenter="false"/>
+			<texture depth="2" name="zompactItemBackground" size="60,60" texture="[zompact_requiredcell]" material="Materials/Transparent Colored" pos="0,0" />
+			<sprite depth="4" name="highlightOverlay" width="60" height="60" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true"/>
+
+			<sprite depth="4" name="itemIcon" width="45" height="45" atlas="ItemIconAtlas" sprite="{itemicon}" pos="25,-25" pivot="center" foregroundlayer="true" color="{iconcolor}" />
+			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="" pos="2,-2" foregroundlayer="true"/>
+			
+			<sprite depth="3" name="durabilityBackground" width="5" height="48" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="1,-1" foregroundlayer="true"/>
+			<sprite depth="4" name="durability" width="5" height="48" sprite="menu_empty2px" color="[transparent]" type="filled" filldirection="vertical" pos="1,-1" foregroundlayer="true"/>
+			
+			<sprite depth="5" name="disabledOverlay" width="60" height="60" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+			
+			<label depth="7" name="stackValue" pos="-2,-30" width="50" height="23" text="{itemcount}" font_size="22" effect="outline" justify="right" color="[zompact_itemstackvaluetext]"/>
+			<label depth="7" name="timer" pos="35,-38" width="50" height="24" font_size="24" justify="center" pivot="center" effect="outline" color="[beige]"/>
+			<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="60" height="60" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+			<!--#$-IGS BEGIN: Setting itemName above the soft cursor. -$#-->
+			<label depth="12" name="itemName" pos="0,0" width="0" height="0" text="" font_size="26" justify="center" overflow="resizefreely" effect="outline" color="[zompact_itemstacknametext]"/>
+			<!--*#$-IGS END.-$#-->
+			<sprite depth="13" name="assembleIcon" size="40,40" sprite="ui_game_symbol_lock" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+		</rect>
+	</armory_item_stack>
+	<!--*#$-IGS END.-$#-->
+	<!--#$-IGS BEGIN: Increasing collider scale to improve snap responsiveness -$#-->
+	<oven_item_stack>
+		<rect controller="RequiredItemStack" style="itemStackOven, hover" collider_scale="1.1">
+			<sprite depth="1" name="backgroundMainbg" pos="0,0" width="60" height="60" color="[zompact_reqcellcbg]" type="sliced" fillcenter="true" globalopacitymod="2" />
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="60" height="60" color="[zompact_reqcellcbr]" type="sliced" fillcenter="false" />	
+			<sprite depth="3" name="background" sprite="menu_empty3px" width="60" height="60" color="0,0,0,150" type="sliced" globalopacity="true" fillcenter="false"/>
+			<texture depth="2" name="zompactItemBackground" size="60,60" texture="[zompact_requiredcell]" material="Materials/Transparent Colored" pos="0,0" />
+			<sprite depth="4" name="highlightOverlay" width="60" height="60" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true"/>
+
+			<sprite depth="4" name="itemIcon" width="45" height="45" atlas="ItemIconAtlas" sprite="{itemicon}" pos="25,-25" pivot="center" foregroundlayer="true" color="{iconcolor}" />
+			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="" pos="2,-2" foregroundlayer="true"/>
+			
+			<sprite depth="3" name="durabilityBackground" width="5" height="48" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="1,-1" foregroundlayer="true"/>
+			<sprite depth="4" name="durability" width="5" height="48" sprite="menu_empty2px" color="[transparent]" type="filled" filldirection="vertical" pos="1,-1" foregroundlayer="true"/>
+			
+			<sprite depth="5" name="disabledOverlay" width="60" height="60" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+			
+			<label depth="7" name="stackValue" pos="-2,-30" width="50" height="23" text="{itemcount}" font_size="22" effect="outline" justify="right" color="[zompact_itemstackvaluetext]"/>
+			<label depth="7" name="timer" pos="35,-38" width="50" height="24" font_size="24" justify="center" pivot="center" effect="outline" color="[beige]"/>
+			<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="60" height="60" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+			<!--#$-IGS BEGIN: Setting itemName above the soft cursor. -$#-->
+			<label depth="12" name="itemName" pos="0,0" width="0" height="0" text="" font_size="26" justify="center" overflow="resizefreely" effect="outline" color="[zompact_itemstacknametext]"/>
+			<!--*#$-IGS END.-$#-->
+			<sprite depth="13" name="assembleIcon" size="40,40" sprite="ui_game_symbol_lock" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+		</rect>
+	</oven_item_stack>
+	<!--*#$-IGS END.-$#-->
+	<!--#$-IGS BEGIN: Increasing collider scale to improve snap responsiveness -$#-->
+	<combine_item_stack>
+		<rect controller="RequiredItemStack" style="itemStackCombine, hover" collider_scale="1.1">
+			<sprite depth="1" name="backgroundMainbg" pos="0,0" width="60" height="60" color="[zompact_reqcellcbg]" type="sliced" fillcenter="true" globalopacitymod="2" />
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="60" height="60" color="[zompact_reqcellcbr]" type="sliced" fillcenter="false" />	
+			<sprite depth="3" name="background" sprite="menu_empty3px" width="60" height="60" color="0,0,0,150" type="sliced" globalopacity="true" fillcenter="false"/>
+			<texture depth="2" name="zompactItemBackground" size="60,60" texture="[zompact_requiredcell]" material="Materials/Transparent Colored" pos="0,0" />
+			<sprite depth="4" name="highlightOverlay" width="60" height="60" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true"/>
+
+			<sprite depth="4" name="itemIcon" width="45" height="45" atlas="ItemIconAtlas" sprite="{itemicon}" pos="25,-25" pivot="center" foregroundlayer="true" color="{iconcolor}" />
+			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="" pos="2,-2" foregroundlayer="true"/>
+			
+			<sprite depth="3" name="durabilityBackground" width="5" height="48" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="1,-1" foregroundlayer="true"/>
+			<sprite depth="4" name="durability" width="5" height="48" sprite="menu_empty2px" color="[transparent]" type="filled" filldirection="vertical" pos="1,-1" foregroundlayer="true"/>
+			
+			<sprite depth="5" name="disabledOverlay" width="60" height="60" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false"/>
+			
+			<label depth="7" name="stackValue" pos="-2,-30" width="50" height="23" text="{itemcount}" font_size="22" effect="outline" justify="right" color="[zompact_itemstackvaluetext]"/>
+			<label depth="7" name="timer" pos="35,-38" width="50" height="24" font_size="24" justify="center" pivot="center" effect="outline" color="[beige]"/>
+			<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" width="60" height="60" color="255,0,0,255" type="sliced" visible="false" foregroundlayer="true"/>
+			<!--#$-IGS BEGIN: Setting itemName above the soft cursor. -$#-->
+			<label depth="12" name="itemName" pos="0,0" width="0" height="0" text="" font_size="26" justify="center" overflow="resizefreely" effect="outline" color="[zompact_itemstacknametext]"/>
+			<!--*#$-IGS END.-$#-->
+			<sprite depth="13" name="assembleIcon" size="40,40" sprite="ui_game_symbol_lock" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true" />
+		</rect>
+	</combine_item_stack>
+	<!--*#$-IGS END.-$#-->
 	
 </controls>

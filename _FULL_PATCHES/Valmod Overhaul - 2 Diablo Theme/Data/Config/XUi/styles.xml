@@ -17,12 +17,12 @@
 		<style_entry name="zompact_backpackwindowwidth" value="1008"/><!-- Backpack window width  Base Value: 1008   Add (X) for each column over 16-->
 		<style_entry name="zompact_backpackwindowheight" value="150"/><!-- Backpack window height Base Value: 150    Add (X) for each row over (Y)-->
 		
-		<style_entry name="zompact_minibikebasketcolumns" value="3"/><!-- Minibike Storage Grid Columns (technically rows, it seems to be read the opposite of what you expect. Ive named the variables to make sense here, but they fill the normal entry.) -->
-		<style_entry name="zompact_minibikebasketrows" value="6"/><!-- Minibike Storage Grid Rows (technically columns, see above.) -->
+		<style_entry name="zompact_minibikebasketcolumns" value="7"/><!-- Minibike Storage Grid Columns (technically rows, it seems to be read the opposite of what you expect. Ive named the variables to make sense here, but they fill the normal entry.) -->
+		<style_entry name="zompact_minibikebasketrows" value="5"/><!-- Minibike Storage Grid Rows (technically columns, see above.) -->
 		<!-- The 2 variables above need to be set in loot.xml. find "Minibike Storage" adjust "3,6" to match new size -->
 		
-		<style_entry name="zompact_minibikebasketwidth" value="225"/><!-- Minibike Storage Window Width  columns x75 -->
-		<style_entry name="zompact_minibikebasketheight" value="450"/><!-- Minibike Storage Window Height  rows x75 -->
+		<style_entry name="zompact_minibikebasketwidth" value="375"/><!-- Minibike Storage Window Width  columns x75 -->
+		<style_entry name="zompact_minibikebasketheight" value="525"/><!-- Minibike Storage Window Height  rows x75 -->
 		<style_entry name="zompact_minibikebasketthemebgvalue" value="225,50"/><!-- width,height. ONLY ADJUST WIDTH to match what you set above. This is a theme variable. If you do not adjust this, and theme the via zompact_minibikebasket, the image used will not match the width of the window -->
 		
 		<style_entry name="zompact_lootrows" value="10"/><!-- Loot item grid rows --><!-- Vanilla value: 10   is maximum size leave at 10-->
@@ -57,125 +57,125 @@
 		**** A VALUE MUST BE SET - CAN NOT BE NULL***
 		-->
 		<!-- Main Hud -->
-		<style_entry name="zompact_compass" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 595 x 31 Compass Background-->
-		<style_entry name="zompact_hudleft" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 635 x 42 World Stats Background--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
-		<style_entry name="zompact_hudright" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 635 x 42 Player PVE/PVP Stats--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
+		<style_entry name="zompact_compass" value="@file:Mods\Zompact\Themes\diablo\compass.jpg"/><!-- 595 x 31 Compass Background-->
+		<style_entry name="zompact_hudleft" value="@file:Mods\Zompact\Themes\diablo\hudleft.png"/><!-- 635 x 42 World Stats Background--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
+		<style_entry name="zompact_hudright" value="@file:Mods\Zompact\Themes\diablo\hudright.png"/><!-- 635 x 42 Player PVE/PVP Stats--><!-- top 5 pixels is player xp bar, bottom pixel is bottom of screen -->
 		<style_entry name="zompact_hudbuffbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 640 x 95 OPTIONAL background to the hud buffs display. NO CUSTOMIZABLE CELLS for these.(All cells are drawn at all times even if not used by a buff) -->
 		<style_entry name="zompact_hudclothingbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 640 x 95 OPTIONAL background to the hud clothing display, seperate to the cells-->
-		<style_entry name="zompact_hudshwf" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 150 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
-		<style_entry name="zompact_hudvehicle" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 200 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
+		<style_entry name="zompact_hudshwf" value="@file:Mods\Zompact\Themes\diablo\hudshwf.png"/><!-- 150 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
+		<style_entry name="zompact_hudvehicle" value="@file:Mods\Zompact\Themes\diablo\hudvehicle.png"/><!-- 200 x 20 --><!-- Must be an overlay, transparent section for the fill bar -->
 		<style_entry name="zompact_toolbelt" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 610 x 75 --><!-- Optional, not necessary, little room left/right no room available top/bottom. pointless really, its there if you want to use it -->
-		<style_entry name="zompact_xpoverlay" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 1783 x 6 --><!-- Must be an overlay, transparent section for the fill bar -->
-		<style_entry name="zompact_activeitembg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 162 x 70 Active Item Background / Ammo Counter Background-->
+		<style_entry name="zompact_xpoverlay" value="@file:Mods\Zompact\Themes\diablo\xpbar.png"/><!-- 1783 x 6 --><!-- Must be an overlay, transparent section for the fill bar -->
+		<style_entry name="zompact_activeitembg" value="@file:Mods\Zompact\Themes\diablo\activeitem.png"/><!-- 162 x 70 Active Item Background / Ammo Counter Background-->
 		<style_entry name="zompact_collecteditembg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 162 x 43 Collected Item Background -->
 		<!-- Main Screens -->
-		<style_entry name="zompact_paging" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 700 x 61 Main Menu Background-->
-		<style_entry name="zompact_nonpaging" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 500 x 61 Forge/Workbench Header Background-->
-		<style_entry name="zompact_craftitembg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 200 x 250 Crafting item Background-->
-		<style_entry name="zompact_craftitemdescbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 415 x 250 Crafting Item Description Background-->
-		<style_entry name="zompact_craftitemamountbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 140 x 50 Crafting Item Counter Background--><!-- these counters must be kept seperate due to way the windows work, if you cover this area from either craftlistsearchbg or craftlistheaderbg this item will be hidden -->
-		<style_entry name="zompact_craftitemdescheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 405 x 30 Crafting Item Description header background-->
-		<style_entry name="zompact_craftlistsearchbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 255 x 50 Crafting List Search Background-->
-		<style_entry name="zompact_craftlistpagibg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 400 x 60 Crafting List Pagination background-->
-		<style_entry name="zompact_craftlistmenubg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 45 x 450 Crafting List Menu Background-->
-		<style_entry name="zompact_craftlistheaderbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 400 x 50 Crafting List Header Background-->
-		<style_entry name="zompact_creative" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 420 x 62 Creative Menu Header Background -->
-		<style_entry name="zompact_creativemenu" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 50 x 300 Creative Menu Menu Background-->
-		<style_entry name="zompact_emptybg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 700 x 250 Inspect/Empty Item info panel background-->
-		<style_entry name="zompact_itembg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 200 x 250 Item Info Panel Background-->
-		<style_entry name="zompact_itemdescbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 450 x 250 Item description background-->
-		<style_entry name="zompact_itemdescheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 440 x 30 item description header background-->
-		<style_entry name="zompact_itemstatsheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 440 x 30 item stats header background-->
-		<style_entry name="zompact_itemqualityheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 190 x 40 item quality header //Used when a item doesnt have a quality colour value attached -->
-		<style_entry name="zompact_backpack" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 1008 x 50 inventory header background-->
-		<style_entry name="zompact_workbench" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 200 x 250 workbench window background-->
-		<style_entry name="zompact_forge" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 300 x 250 forge window background-->
-		<style_entry name="zompact_burnbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 120 x 50 burn time background-->
-		<style_entry name="zompact_burnbtnbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 200 x 50 burn button background-->
-		<style_entry name="zompact_activebuffbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 290 x 300 active buffs background in character screen-->
-		<style_entry name="zompact_activebuffheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 290 x 30 active buffs header background in character screen-->
-		<style_entry name="zompact_charbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 320 x 500 character background-->
-		<style_entry name="zompact_charheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 320 x 30 character header background-->
-		<style_entry name="zompact_charflag" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 100 x 100 character level flag-->
-		<style_entry name="zompact_buffitembg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 200 x 250 buff item info background-->
-		<style_entry name="zompact_buffitemdescbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 500 x 250 buff item info description background-->
-		<style_entry name="zompact_buffitemstatsheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 490 x 30 buff item stats header background -->
-		<style_entry name="zompact_buffitemdescheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 490 x 30 buff item description header background-->
-		<style_entry name="zompact_map" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 718 x 43 Map header background--><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
-		<style_entry name="zompact_maptoolbar" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 718 x 43 map toolbar background --><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
-		<style_entry name="zompact_waypointbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 350 x 50 map waypoint background --><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
-		<style_entry name="zompact_waypointtoolbar" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 350 x 100 map waypoint toolbar background --><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
-		<style_entry name="zompact_sharedbg" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 350 x 50 map shared waypoints background--><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
-		<style_entry name="zompact_sharedtoolbar" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 350 x 50 map shared waypoints toolbar background--><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
-		<style_entry name="zompact_playersmenu" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 1126 x 50 players menu background-->
-		<style_entry name="zompact_playerspagi" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 1126 x 50 players menu pagination-->
-		<style_entry name="zompact_playersheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 1126 x 50 players header background-->
-		<style_entry name="zompact_minibike" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 300 x 250 Minibike background-->
-		<style_entry name="zompact_bikeitemdescheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 290 x 30 Minibike Description header-->
-		<style_entry name="zompact_minibikebasket" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 225 x 50 Minibike Storage header-->
-		<style_entry name="zompact_assembly" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 300 x 250 Assembly background-->
-		<style_entry name="zompact_assemblyitemdescheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 290 x 30 Assembly item header background-->
-		<style_entry name="zompact_skillsheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 700 x 50 Skills header background-->
-		<style_entry name="zompact_skillslistmenu" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 700 x 50 skills list menu background-->
-		<style_entry name="zompact_skillslistheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 700 x 50 skills list item header background-->
-		<style_entry name="zompact_skillsinfoheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 603 x 50 skills info header-->
-		<style_entry name="zompact_skillsinfoicon" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 154 x 154 skills icon background-->
-		<style_entry name="zompact_skillsinfodesc" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 440 x 210 skills item info description background-->
-		<style_entry name="zompact_skillsinfoprogress" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 603 x 30 skills item progress background-->
-		<style_entry name="zompact_skillsinforequirements" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 603 x 470 skills item requirements background-->
-		<style_entry name="zompact_questlistheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 450 x 50 quest list header background -->
-		<style_entry name="zompact_questlistsearch" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 450 x 50 quest list search background-->
-		<style_entry name="zompact_questinfoheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 753 x 50 quest info header background-->
-		<style_entry name="zompact_questinfodesc" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 753 x 500 quest info description background-->
-		<style_entry name="zompact_questobjheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 743 x 40 quest objective/rewards header background-->
-		<style_entry name="zompact_questofferheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 606 x 50 quest offer header background-->
-		<style_entry name="zompact_questofferdesc" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 606 x 329 quest offer description background-->
-		<style_entry name="zompact_questofferaccept" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 303 x 36 quest offer accept button background-->
-		<style_entry name="zompact_questofferdecline" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 303 x 36 quest offer decline button background-->
-		<style_entry name="zompact_journallistheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 450 x 50 journal list header background-->
-		<style_entry name="zompact_journallistsearch" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 450 x 50 journal list search background-->
-		<style_entry name="zompact_journalinfoheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 653 x 50 journal info header background-->
-		<style_entry name="zompact_journalinfodesc" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 653 x 266 journal info description background-->
-		<style_entry name="zompact_traderheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 400 x 50 trader header background-->
-		<style_entry name="zompact_tradermenu" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 45 x 570 trader menu background -->
-		<style_entry name="zompact_tradersearch" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 255 x 50 trader search background-->
-		<style_entry name="zompact_tradercounter" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 140 x 50 trader item counter background--><!-- these counters must be kept seperate due to way windows work, if you cover this area from either tradersearch, traderheader or traderitemheader this item will be hidden -->
-		<style_entry name="zompact_traderpagi" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 110 x 35 trader item pagination background-->
-		<style_entry name="zompact_traderitemheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 400 x 30 trader item list header background-->
-		<style_entry name="zompact_vendingitem" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 200 x 250 trader vending machine item background-->
-		<style_entry name="zompact_vendingdesc" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 330 x 250 trader vending machine item description background-->
-		<style_entry name="zompact_vendingdescheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 320 x 30 trader vending machine item description header background -->
-		<style_entry name="zompact_vendingstatsheader" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 320 x 30 trader vending machine item stats header background-->
+		<style_entry name="zompact_paging" value="@file:Mods\Zompact\Themes\diablo\header.png"/> <!-- 700 x 61 Main Menu Background-->
+		<style_entry name="zompact_nonpaging" value="@file:Mods\Zompact\Themes\diablo\header.png"/> <!-- 500 x 61 Forge/Workbench Header Background-->
+		<style_entry name="zompact_craftitembg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 200 x 250 Crafting item Background-->
+		<style_entry name="zompact_craftitemdescbg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 415 x 250 Crafting Item Description Background-->
+		<style_entry name="zompact_craftitemamountbg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 140 x 50 Crafting Item Counter Background--><!-- these counters must be kept seperate due to way the windows work, if you cover this area from either craftlistsearchbg or craftlistheaderbg this item will be hidden -->
+		<style_entry name="zompact_craftitemdescheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 405 x 30 Crafting Item Description header background-->
+		<style_entry name="zompact_craftlistsearchbg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 255 x 50 Crafting List Search Background-->
+		<style_entry name="zompact_craftlistpagibg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 400 x 60 Crafting List Pagination background-->
+		<style_entry name="zompact_craftlistmenubg" value="@file:Mods\Zompact\Themes\diablo\menu.png"/><!-- 45 x 450 Crafting List Menu Background-->
+		<style_entry name="zompact_craftlistheaderbg" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 400 x 50 Crafting List Header Background-->
+		<style_entry name="zompact_creative" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 420 x 62 Creative Menu Header Background -->
+		<style_entry name="zompact_creativemenu" value="@file:Mods\Zompact\Themes\diablo\menu.png"/><!-- 50 x 300 Creative Menu Menu Background-->
+		<style_entry name="zompact_emptybg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 700 x 250 Inspect/Empty Item info panel background-->
+		<style_entry name="zompact_itembg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 200 x 250 Item Info Panel Background-->
+		<style_entry name="zompact_itemdescbg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 450 x 250 Item description background-->
+		<style_entry name="zompact_itemdescheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 440 x 30 item description header background-->
+		<style_entry name="zompact_itemstatsheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 440 x 30 item stats header background-->
+		<style_entry name="zompact_itemqualityheader" value="@file:Mods\Zompact\Themes\diablo\questaction.png"/><!-- 190 x 40 item quality header //Used when a item doesnt have a quality colour value attached -->
+		<style_entry name="zompact_backpack" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 1008 x 50 inventory header background-->
+		<style_entry name="zompact_workbench" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 200 x 250 workbench window background-->
+		<style_entry name="zompact_forge" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 300 x 250 forge window background-->
+		<style_entry name="zompact_burnbg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/> <!-- 120 x 50 burn time background-->
+		<style_entry name="zompact_burnbtnbg" value="@file:Mods\Zompact\Themes\diablo\burnbtn.jpg"/> <!-- 200 x 50 burn button background-->
+		<style_entry name="zompact_activebuffbg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 290 x 300 active buffs background in character screen-->
+		<style_entry name="zompact_activebuffheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 290 x 30 active buffs header background in character screen-->
+		<style_entry name="zompact_charbg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 320 x 500 character background-->
+		<style_entry name="zompact_charheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 320 x 30 character header background-->
+		<style_entry name="zompact_charflag" value="@file:Mods\Zompact\Themes\diablo\charflag.png"/><!-- 100 x 100 character level flag-->
+		<style_entry name="zompact_buffitembg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 200 x 250 buff item info background-->
+		<style_entry name="zompact_buffitemdescbg" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 500 x 250 buff item info description background-->
+		<style_entry name="zompact_buffitemstatsheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 490 x 30 buff item stats header background -->
+		<style_entry name="zompact_buffitemdescheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 490 x 30 buff item description header background-->
+		<style_entry name="zompact_map" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 718 x 43 Map header background--><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
+		<style_entry name="zompact_maptoolbar" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 718 x 43 map toolbar background --><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
+		<style_entry name="zompact_waypointbg" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 350 x 50 map waypoint background --><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
+		<style_entry name="zompact_waypointtoolbar" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 350 x 100 map waypoint toolbar background --><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
+		<style_entry name="zompact_sharedbg" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 350 x 50 map shared waypoints background--><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
+		<style_entry name="zompact_sharedtoolbar" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 350 x 50 map shared waypoints toolbar background--><!-- DO NOT REPOSITION THE MAP SCREEN AT ALL, YOU WILL BREAK WAYPOINTS -->
+		<style_entry name="zompact_playersmenu" value="@file:Mods\Zompact\Themes\diablo\playersmenu.jpg"/> <!-- 1126 x 50 players menu background-->
+		<style_entry name="zompact_playerspagi" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/> <!-- 1126 x 50 players menu pagination-->
+		<style_entry name="zompact_playersheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/> <!-- 1126 x 50 players header background-->
+		<style_entry name="zompact_minibike" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 300 x 250 Minibike background-->
+		<style_entry name="zompact_bikeitemdescheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 290 x 30 Minibike Description header-->
+		<style_entry name="zompact_minibikebasket" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 225 x 50 Minibike Storage header-->
+		<style_entry name="zompact_assembly" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 300 x 250 Assembly background-->
+		<style_entry name="zompact_assemblyitemdescheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 290 x 30 Assembly item header background-->
+		<style_entry name="zompact_skillsheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 700 x 50 Skills header background-->
+		<style_entry name="zompact_skillslistmenu" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 700 x 50 skills list menu background-->
+		<style_entry name="zompact_skillslistheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 700 x 50 skills list item header background-->
+		<style_entry name="zompact_skillsinfoheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 603 x 50 skills info header-->
+		<style_entry name="zompact_skillsinfoicon" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 154 x 154 skills icon background-->
+		<style_entry name="zompact_skillsinfodesc" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 440 x 210 skills item info description background-->
+		<style_entry name="zompact_skillsinfoprogress" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 603 x 30 skills item progress background-->
+		<style_entry name="zompact_skillsinforequirements" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 603 x 200 skills item requirements background-->
+		<style_entry name="zompact_questlistheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 450 x 50 quest list header background -->
+		<style_entry name="zompact_questlistsearch" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 450 x 50 quest list search background-->
+		<style_entry name="zompact_questinfoheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 753 x 50 quest info header background-->
+		<style_entry name="zompact_questinfodesc" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 753 x 500 quest info description background-->
+		<style_entry name="zompact_questobjheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 743 x 40 quest objective/rewards header background-->
+		<style_entry name="zompact_questofferheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 606 x 50 quest offer header background-->
+		<style_entry name="zompact_questofferdesc" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 606 x 329 quest offer description background-->
+		<style_entry name="zompact_questofferaccept" value="@file:Mods\Zompact\Themes\diablo\questaction.png"/><!-- 303 x 36 quest offer accept button background-->
+		<style_entry name="zompact_questofferdecline" value="@file:Mods\Zompact\Themes\diablo\questaction.png"/><!-- 303 x 36 quest offer decline button background-->
+		<style_entry name="zompact_journallistheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 450 x 50 journal list header background-->
+		<style_entry name="zompact_journallistsearch" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 450 x 50 journal list search background-->
+		<style_entry name="zompact_journalinfoheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 653 x 50 journal info header background-->
+		<style_entry name="zompact_journalinfodesc" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 653 x 266 journal info description background-->
+		<style_entry name="zompact_traderheader" value="@file:Mods\Zompact\Themes\diablo\screenheader.png"/><!-- 400 x 50 trader header background-->
+		<style_entry name="zompact_tradermenu" value="@file:Mods\Zompact\Themes\diablo\menu.png"/><!-- 45 x 570 trader menu background -->
+		<style_entry name="zompact_tradersearch" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 255 x 50 trader search background-->
+		<style_entry name="zompact_tradercounter" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 140 x 50 trader item counter background--><!-- these counters must be kept seperate due to way windows work, if you cover this area from either tradersearch, traderheader or traderitemheader this item will be hidden -->
+		<style_entry name="zompact_traderpagi" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 110 x 35 trader item pagination background-->
+		<style_entry name="zompact_traderitemheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 400 x 30 trader item list header background-->
+		<style_entry name="zompact_vendingitem" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 200 x 250 trader vending machine item background-->
+		<style_entry name="zompact_vendingdesc" value="@file:Mods\Zompact\Themes\diablo\uiframe.jpg"/><!-- 330 x 250 trader vending machine item description background-->
+		<style_entry name="zompact_vendingdescheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 320 x 30 trader vending machine item description header background -->
+		<style_entry name="zompact_vendingstatsheader" value="@file:Mods\Zompact\Themes\diablo\itemheader.png"/><!-- 320 x 30 trader vending machine item stats header background-->
 		<!-- Buttons/Grids -->
-		<style_entry name="zompact_action" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 75 x 50 --><!-- iteminfopanel, craftinfopanel, assemble, minibike buttons -->
-		<style_entry name="zompact_backpackcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 63 x 63 --><!-- Inventory cell background -->
-		<style_entry name="zompact_toolbeltcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 75 x 75 --><!-- Toolbelt Cell background. Hud numbering will be hidden if this field is filled. If you want to keep hud numbers but change background and border colours do so below zompact_toolbeltcellcbg / zompact_toolbeltcellcbr -->
-		<style_entry name="zompact_lootstackcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 75 x 75 --><!-- Storage/Loot cell background -->
-		<style_entry name="zompact_workcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 60 x 60 --><!-- Workbench/forge/chemistry/cement/campfire cell background-->
-		<style_entry name="zompact_outputcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 50 x 50 --><!-- Workbench/forge/chemistry/cement/campfire output cell background -->
-		<style_entry name="zompact_itempartscell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 41 x 41 --><!-- item parts cell background (item info panel)-->
-		<style_entry name="zompact_requiredcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 60 x 60 --><!-- forge/campfire required parts cell background-->
-		<style_entry name="zompact_ingredientcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 75 x 50 --><!-- Crafting ingredients have/needed cell background -->
-		<style_entry name="zompact_creativecell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 60 x 60 --><!-- creative menu cell background -->
-		<style_entry name="zompact_clothingcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 59 x 59 --><!--Hud clothing cell background -->
-		<style_entry name="zompact_queuecell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 50 x 50 --><!-- Crafting Queue Cell background -->
-		<style_entry name="zompact_activebuffcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 280 x 35 --><!-- Active buffs menu cell background in character screen -->
-		<style_entry name="zompact_buffcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 50 x 50 --><!-- Buff cell background in the buff info panel screen-->
-		<style_entry name="zompact_vehiclecell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 50 x 50 --><!-- Minibike parts cell background -->
-		<style_entry name="zompact_assemblycell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 58 x 50 --><!-- Assembly parts cell background -->
-		<style_entry name="zompact_skillcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 700 x 38 --> <!-- Skill List Entry Cell background. Can be 43 high if your design includes the skill progress bar. Bottom pixel of progress bar is bottom of cell -->
-		<style_entry name="zompact_questcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 450 x 43 --><!-- Quest list entry cell background -->
-		<style_entry name="zompact_journalcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 450 x 43 --><!-- Journal list entry cell background -->
-		<style_entry name="zompact_tradercell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 405 x 50 --><!--Trader item list cell background -->
-		<style_entry name="zompact_recipecell" value="@file:Mods\Zompact\Themes\zompactfill.png"/> <!-- 200 x 50 --><!-- Crafting item list cell background -->
-		<style_entry name="zompact_waypointcell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 350 x 43 --><!-- Map waypoint cell background -->
-		<style_entry name="zompact_invitecell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 350 x 43 --><!-- Map shared waypoints cell background -->
-		<style_entry name="zompact_playerscell" value="@file:Mods\Zompact\Themes\zompactfill.png"/><!-- 1128 x 43 --><!-- Players list cell background -->
+		<style_entry name="zompact_action" value="@file:Mods\Zompact\Themes\diablo\button.jpg"/> <!-- 75 x 50 --><!-- iteminfopanel, craftinfopanel, assemble, minibike buttons -->
+		<style_entry name="zompact_backpackcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/> <!-- 63 x 63 --><!-- Inventory cell background -->
+		<style_entry name="zompact_toolbeltcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/> <!-- 75 x 75 --><!-- Toolbelt Cell background. Hud numbering will be hidden if this field is filled. If you want to keep hud numbers but change background and border colours do so below zompact_toolbeltcellcbg / zompact_toolbeltcellcbr -->
+		<style_entry name="zompact_lootstackcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/> <!-- 75 x 75 --><!-- Storage/Loot cell background -->
+		<style_entry name="zompact_workcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 60 x 60 --><!-- Workbench/forge/chemistry/cement/campfire cell background-->
+		<style_entry name="zompact_outputcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 50 x 50 --><!-- Workbench/forge/chemistry/cement/campfire output cell background -->
+		<style_entry name="zompact_itempartscell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 41 x 41 --><!-- item parts cell background (item info panel)-->
+		<style_entry name="zompact_requiredcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 60 x 60 --><!-- forge/campfire required parts cell background-->
+		<style_entry name="zompact_ingredientcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 75 x 50 --><!-- Crafting ingredients have/needed cell background -->
+		<style_entry name="zompact_creativecell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 60 x 60 --><!-- creative menu cell background -->
+		<style_entry name="zompact_clothingcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 59 x 59 --><!--Hud clothing cell background -->
+		<style_entry name="zompact_queuecell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 50 x 50 --><!-- Crafting Queue Cell background -->
+		<style_entry name="zompact_activebuffcell" value="@file:Mods\Zompact\Themes\diablo\list.png"/><!-- 280 x 35 --><!-- Active buffs menu cell background in character screen -->
+		<style_entry name="zompact_buffcell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 50 x 50 --><!-- Buff cell background in the buff info panel screen-->
+		<style_entry name="zompact_vehiclecell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 50 x 50 --><!-- Minibike parts cell background -->
+		<style_entry name="zompact_assemblycell" value="@file:Mods\Zompact\Themes\diablo\invcell.png"/><!-- 58 x 50 --><!-- Assembly parts cell background -->
+		<style_entry name="zompact_skillcell" value="@file:Mods\Zompact\Themes\diablo\list.png"/> <!-- 700 x 38 --> <!-- Skill List Entry Cell background. Can be 43 high if your design includes the skill progress bar. Bottom pixel of progress bar is bottom of cell -->
+		<style_entry name="zompact_questcell" value="@file:Mods\Zompact\Themes\diablo\list.png"/><!-- 450 x 43 --><!-- Quest list entry cell background -->
+		<style_entry name="zompact_journalcell" value="@file:Mods\Zompact\Themes\diablo\list.png"/><!-- 450 x 43 --><!-- Journal list entry cell background -->
+		<style_entry name="zompact_tradercell" value="@file:Mods\Zompact\Themes\diablo\tradercell.jpg"/><!-- 405 x 50 --><!--Trader item list cell background -->
+		<style_entry name="zompact_recipecell" value="@file:Mods\Zompact\Themes\diablo\recipecell.jpg"/> <!-- 200 x 50 --><!-- Crafting item list cell background -->
+		<style_entry name="zompact_waypointcell" value="@file:Mods\Zompact\Themes\diablo\list.png"/><!-- 350 x 43 --><!-- Map waypoint cell background -->
+		<style_entry name="zompact_invitecell" value="@file:Mods\Zompact\Themes\diablo\list.png"/><!-- 350 x 43 --><!-- Map shared waypoints cell background -->
+		<style_entry name="zompact_playerscell" value="@file:Mods\Zompact\Themes\diablo\playerscell.jpg"/><!-- 1128 x 43 --><!-- Players list cell background -->
 		<!-- ZOMPACT NAMED THEME ENTRIES END -->
 		<!-- Zompact Colours Start -->
 		<!-- Main HUD -->
 		<style_entry name="zompact_xpbg" value="120,120,120,255"/> <!-- HUD Player XP bar background color 120,120,120,255 default-->
-		<style_entry name="zompact_xp" value="235,235,235,255"/> <!-- HUD Player XP bar colour 235,235,235,255 default-->
+		<style_entry name="zompact_xp" value="[darkorange]"/> <!-- HUD Player XP bar colour 235,235,235,255 default-->
 		<style_entry name="zompact_trackerbg" value="52,52,52,150"/><!-- HUD Quest tracker Background color/opacity. A custom sprite can be enabled here if you want to create one. name it: zompacttracker.png (enable sprite in windows.xml (search zompacttracker))-->
 		<style_entry name="zompact_questtrackertext" value="[white]"/><!-- HUD Quest tracker text colour -->
 		<style_entry name="zompact_toolbeltcellcbg" value="52,52,52,255"/><!-- HUD Toolbelt cell coloured sprite background. Change this value to change the color of the toolbelt cell background. WARNING! zompact_toolbeltcell overrides this option -->
@@ -476,7 +476,7 @@
 		<style_entry name="select_color" value="[zompact_holding]"/>
 		<style_entry name="press_color" value="[limeGreen]"/>
 		<style_entry name="final_pressed_color" value="[lightGrey]"/>
-		<style_entry name="background_color" value="[mediumGrey]"/>
+		<style_entry name="background_color" value="[transparent]"/>
 		<style_entry name="highlight_color" value="[hoverColor]"/>
 		<style_entry name="holding_color" value="[white]"/>
 		<style_entry name="width" value="59"/>
@@ -506,7 +506,7 @@
 		<style_entry name="select_color" value="[zompact_holding]"/>
 		<style_entry name="press_color" value="[limeGreen]"/>
 		<style_entry name="final_pressed_color" value="[lightGrey]"/>
-		<style_entry name="background_color" value="[mediumGrey]"/>
+		<style_entry name="background_color" value="[transparent]"/>
 		<style_entry name="highlight_color" value="[hoverColor]"/>
 		<style_entry name="holding_color" value="[white]"/>
 		<style_entry name="width" value="50"/>
@@ -928,5 +928,111 @@
 		<style_entry name="invalid_sprite" value="ui_game_symbol_x"/>
 		<style_entry name="width" value="603"/>
 		<style_entry name="height" value="400"/>
+	</style>
+	<!-- VALMOD -->
+	<style name="itemStackCombine">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackOven">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="[transparent]"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackArmory">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackDecor">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackCement">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackBench">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+	<style name="itemStackChem">
+		<style_entry name="select_color" value="[zompact_holding]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="0,0,0,1"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
 	</style>
 </styles>

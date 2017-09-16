@@ -252,6 +252,45 @@
 		<window_group name="prefabList">
 			<window name="prefabList" />
 		</window_group>
+		<!-- Valmod -->
+		<window_group name="workstation_workstationOven" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOven"/>
+			<window name="windowNonPagingHeader" />
+		</window_group>
 		
+		<window_group name="workstation_dyeStation" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowDye" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_workstationMerchant" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowMerchant" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_workstationArmory" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowArmory"/>
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="workstation_workstationDecor" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowDecor"/>
+			<window name="windowNonPagingHeader" />
+		</window_group>
 	</ruleset>
 </xui>
